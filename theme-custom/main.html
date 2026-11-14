@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{#
+  Zensical подключает файлы из extra_javascript только из каталога docs/, а custom_dir использует только для шаблонов.
+  Чтобы не класть скрипт в docs/ (там только документы аналитиков), встраиваем его в страницу из theme-custom/.
+#}
+{% block scripts %}
+  {{ super() }}
+  <script>
+{% include "javascripts/tabbed-toc.js" %}
+  </script>
+{% endblock %}

@@ -1,10 +1,16 @@
 // Правое меню («Содержание») показывает заголовки только активной вкладки (=== "Назначение" / === "Цели").
-// Файл лежит в theme-custom/javascripts/, в docs/ только документы аналитиков.
+// Файл лежит в theme-custom/javascripts/ и подключается шаблоном theme-custom/main.html (в docs/ только документы аналитиков).
 (function () {
   "use strict";
 
+  // Защита от повторного выполнения при переходах без перезагрузки страницы
+  if (window.__tabbedTocInit) return;
+  window.__tabbedTocInit = true;
+
+  // При navigation.instant тема превращает якоря оглавления в абсолютные ссылки (https://.../page/#id),
+  // поэтому ищем по вхождению «#», а сам якорь берём из link.hash.
   var TOC_LINKS =
-    "[data-md-component='toc'] a[href^='#'], .md-sidebar--secondary a[href^='#']";
+    "[data-md-component='toc'] a[href*='#'], .md-sidebar--secondary a[href*='#']";
 
   // Находит вкладку, которой принадлежит заголовок, и сообщает, активна ли она.
   // Берём состояние из DOM (какая radio-кнопка отмечена), а не из геометрии, поэтому
@@ -36,10 +42,10 @@
     var links = document.querySelectorAll(TOC_LINKS);
     for (var i = 0; i < links.length; i++) {
       var link = links[i];
-      var href = link.getAttribute("href");
-      if (!href || href.length < 2) continue;
+      var hash = link.hash;
+      if (!hash || hash.length < 2) continue;
 
-      var heading = document.getElementById(decodeURIComponent(href.slice(1)));
+      var heading = document.getElementById(decodeURIComponent(hash.slice(1)));
       if (!heading) continue;
 
       var item = link.closest("li") || link;
