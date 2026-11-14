@@ -22,7 +22,7 @@ nav = [
         ]},
         {"Реестр требований" = [
             "requirements/features/index.md",
-            {"Справочник стран" = "requirements/features/country/index.md"},    
+            {"Справочник стран" = "requirements/features/country/f/index.md"},    
         ]},
     ]},
     { "Архив" = "requirements-archive/index.md" },
