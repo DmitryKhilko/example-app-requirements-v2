@@ -23,8 +23,8 @@ nav = [
         {"Реестр требований" = [
             "requirements/features/index.md",
             {"Справочник стран" = [
-                "requirements/features/country/f/index.md",
-                "requirements/features/country/sf/index.md"
+                {"Общие требования" = requirements/features/country/f/index.md"},
+                {"Создание" = "requirements/features/country/sf-create/index.md}"
                 ]}, 
         ]},
     ]},
