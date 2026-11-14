@@ -43,10 +43,11 @@ jobs:
         with:
           python-version: 3.x
 
-      - run: echo "cache_id=$(date --utc +'%V')" >> $GITHUB_ENV
+      - id: cache-week
+        run: echo "id=$(date --utc +'%V')" >> "$GITHUB_OUTPUT"
       - uses: actions/cache@v6
         with:
-          key: zensical-toml-${{ env.cache_id }}
+          key: zensical-toml-${{ steps.cache-week.outputs.id }}
           path: .cache
           restore-keys: |
             zensical-toml-
