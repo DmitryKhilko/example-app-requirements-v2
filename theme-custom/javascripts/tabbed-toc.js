@@ -1,4 +1,7 @@
-// Правое меню («Содержание») показывает заголовки только активной вкладки (=== "Назначение" / === "Цели").
+// Правое меню («Содержание») на страницах с вкладками (=== "Назначение" / === "Цели"):
+//  1) показывает заголовки только активной вкладки;
+//  2) подсвечивает текущий раздел по прокрутке, считая только заголовки активной вкладки.
+//     Штатная подсветка темы учитывает и скрытые вкладки (у них нулевые координаты), поэтому работает только на первой.
 // Файл лежит в theme-custom/javascripts/ и подключается шаблоном theme-custom/main.html (в docs/ только документы аналитиков).
 (function () {
   "use strict";
@@ -40,6 +43,7 @@
 
   function syncTocWithTabs() {
     var links = document.querySelectorAll(TOC_LINKS);
+    var shown = [];
     for (var i = 0; i < links.length; i++) {
       var link = links[i];
       var hash = link.hash;
@@ -51,9 +55,46 @@
       var item = link.closest("li") || link;
       if (isInInactiveTab(heading)) {
         item.style.setProperty("display", "none", "important");
+        setState(link, false, false);
       } else {
         item.style.removeProperty("display");
+        shown.push({ link: link, heading: heading });
       }
+    }
+    updateActive(shown);
+  }
+
+  var ACTIVE = "md-nav__link--active";
+  var PASSED = "md-nav__link--passed";
+
+  function setState(link, passed, active) {
+    // Меняем класс только при расхождении, чтобы не зацикливать наблюдатель за DOM
+    if (link.classList.contains(PASSED) !== passed) link.classList.toggle(PASSED, passed);
+    if (link.classList.contains(ACTIVE) !== active) link.classList.toggle(ACTIVE, active);
+  }
+
+  // Нижняя граница закреплённых шапки и вкладок: заголовок «пройден», когда поднялся выше неё
+  function stickyOffset() {
+    var bottom = 0;
+    var bars = document.querySelectorAll(".md-header, .md-tabs");
+    for (var i = 0; i < bars.length; i++) {
+      var r = bars[i].getBoundingClientRect();
+      if (r.bottom > bottom && r.top <= 1) bottom = r.bottom;
+    }
+    return bottom + 16;
+  }
+
+  // Подсветка: активен последний заголовок видимой вкладки, поднявшийся выше границы; выше него — «пройдены»
+  function updateActive(shown) {
+    var offset = stickyOffset();
+    var atBottom = window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 2;
+    var current = -1;
+    for (var i = 0; i < shown.length; i++) {
+      if (shown[i].heading.getBoundingClientRect().top <= offset) current = i;
+    }
+    if (atBottom && shown.length) current = shown.length - 1;
+    for (var j = 0; j < shown.length; j++) {
+      setState(shown[j].link, j <= current, j === current);
     }
   }
 
@@ -75,13 +116,18 @@
     if (e.target.closest && e.target.closest(".tabbed-labels, .tabbed-set label")) schedule();
   });
   window.addEventListener("hashchange", schedule);
+  window.addEventListener("scroll", schedule, { passive: true });
+  window.addEventListener("resize", schedule);
   window.addEventListener("pageshow", schedule);
 
   // Тема может заново построить оглавление (переход по страницам без перезагрузки, прокрутка к якорю),
   // из-за чего скрытые пункты появляются снова. Следим за изменением состава DOM и пересчитываем.
+  // Класс-атрибуты тоже отслеживаем: тема может сама переставить подсветку, тогда возвращаем нашу.
   new MutationObserver(schedule).observe(document.documentElement, {
     childList: true,
     subtree: true,
+    attributes: true,
+    attributeFilter: ["class"],
   });
 
   if (document.readyState === "loading") {
