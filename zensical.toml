@@ -132,3 +132,8 @@ sources.exclude = ["index.md", "**/index.md", "releases.md"]
 [project.markdown_extensions.pymdownx.emoji]
 emoji_index = "zensical.extensions.emoji.twemoji"
 emoji_generator = "zensical.extensions.emoji.to_svg"
+
+# Открытие файлов как вкладок из index.md
+[project.markdown_extensions.pymdownx.snippets]
+base_path = ["docs"]
+check_paths = true
