@@ -23,13 +23,13 @@ nav = [
         {"Реестр требований" = [
             "requirements/features/index.md",
             {"Справочник стран" = [
-                {"Общие требования" = requirements/features/country/f/index.md"},
-                {"Создание" = "requirements/features/country/sf-create/index.md}"
-                ]}, 
+                {"Общие требования" = "requirements/features/country/f/index.md"},
+                {"Создание" = "requirements/features/country/sf-create/index.md"},
+            ]}, 
         ]},
     ]},
-    { "Архив" = "requirements-archive/index.md" },
-]    
+    {"Архив" = "requirements-archive/index.md"},
+]
 # END GENERATED NAV
 
 # --- ТЕМА ---
