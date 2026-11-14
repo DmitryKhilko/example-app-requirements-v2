@@ -1,3 +1,4 @@
+// Фильтрация оглавления правого меню для вкладки файла index.md по активной вкладке
 document$.subscribe(function () {
   function syncTocWithTabs() {
     // Находим все блоки вкладок контента

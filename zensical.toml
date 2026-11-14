@@ -9,7 +9,7 @@ repo_name = "GitHub"
 edit_uri = "edit/main/docs/"
 
 extra_javascript = [
-    "theme-custom/javascripts/tabbed-toc.js"
+    "javascripts/tabbed-toc.js"
 ]
 
 # BEGIN GENERATED NAV — не редактируйте вручную
@@ -34,6 +34,7 @@ nav = [
 
 # --- ТЕМА ---
 [project.theme]
+custom_dir = "theme-custom"
 language = "ru"
 # Все возможности включаются ОДНИМ списком внутри [project.theme]
 features = [
