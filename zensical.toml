@@ -8,6 +8,11 @@ repo_url = "https://github.com/DmitryKhilko/example-app-requirements-v2"
 repo_name = "GitHub"
 edit_uri = "edit/main/docs/"
 
+[project]
+extra_javascript = [
+    "javascripts/tabbed-toc.js"
+]
+
 # BEGIN GENERATED NAV — не редактируйте вручную
 nav = [
     {"О продукте" = "index.md"},
