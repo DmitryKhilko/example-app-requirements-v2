@@ -16,9 +16,11 @@ nav = [
         {"Глоссарий" = "requirements/business-context/glossary.md"},    
         {"Бизнес-требования" = "requirements/business-context/business-requirements.md"},
         {"Глобальные требования" = [
+            "requirements/global-features/index.md",
             {"Всплывающие сообщения (toast)" = "requirements/global-features/sf-g-toast/index.md"},    
         ]},
-        {"Предметная область" = [
+        {"Реестр требований" = [
+            "requirements/features/index.md",
             {"Справочник стран" = "requirements/features/country/index.md"},    
         ]},
     ]},
