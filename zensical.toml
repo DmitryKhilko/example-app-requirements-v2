@@ -46,6 +46,10 @@ nav = [
         ]},
     ]},
     {"Архив" = "requirements-archive/index.md"},
+    {"Методология" = [
+        {"Глоссарий" = "methodology/glossary.md"},    
+        {"Стандарт создания требований к ПО" = "methodology/standard-requirements.md"},    
+    ]},
 ]
 # END GENERATED NAV
 
