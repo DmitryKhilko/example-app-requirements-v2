@@ -40,6 +40,12 @@ nav = [
 # а в docs/ лежат только документы аналитиков. Тёмно-синюю тёмную схему задаёт custom/css/extra.css.
 custom_dir = "custom"
 language = "ru"
+# Логотип в заголовке сайта и значок вкладки браузера: блок формирует скрипт по SITE_LOGO / SITE_FAVICON (scripts/docgen/config.py)
+# Пути относительно docs/ (так их разрешает Zensical), сам файл лежит в docs/assets/
+# BEGIN GENERATED LOGO — задаётся в scripts/docgen/config.py (SITE_LOGO, SITE_FAVICON), не редактируйте вручную
+logo = "assets/logo.png"
+favicon = "assets/logo.png"
+# END GENERATED LOGO
 # Все возможности включаются ОДНИМ списком внутри [project.theme]
 features = [
     # навигация
