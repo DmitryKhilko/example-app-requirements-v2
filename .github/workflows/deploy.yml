@@ -55,13 +55,13 @@ jobs:
       # uv ставится один раз через pip (без сторонних действий), дальше пакеты ставит uv
       - run: python -m pip install uv
 
-      - run: uv pip install --system -r scripts/requirements.txt zensical
+      - run: uv pip install --system -r custom/py/requirements.txt zensical
 
       # Падает с ошибкой, если в метаданных спецификаций нет module или feature_name либо файл лежит вне docs/registry/
       # --versioning: пересчитывает doc_version, datetime_version, owner и «Журнал изменений» активных спецификаций по истории git
       # (ссылки на коммиты)
       #- name: Generate docs
-      #  run: python scripts/generate_docs.py --versioning
+      #  run: python custom/py/generate_docs.py --versioning
 
       # Коммит от GITHUB_TOKEN не запускает новый workflow, поэтому цикла не возникает.
       # Метка [skip ci] добавлена как страховка (например, если позже заменить токен на PAT).

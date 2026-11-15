@@ -35,7 +35,10 @@ nav = [
 
 # --- ТЕМА ---
 [project.theme]
-custom_dir = "theme-custom"
+# Единый каталог всего, что не является документами: шаблон main.html, стили (css/), скрипты (js/, py/).
+# Стили и скрипты встраиваются в страницы шаблоном custom/main.html, поэтому extra_css и extra_javascript не нужны,
+# а в docs/ лежат только документы аналитиков. Тёмно-синюю тёмную схему задаёт custom/css/extra.css.
+custom_dir = "custom"
 language = "ru"
 # Все возможности включаются ОДНИМ списком внутри [project.theme]
 features = [
