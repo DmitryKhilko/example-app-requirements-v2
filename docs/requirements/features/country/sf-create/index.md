@@ -6,7 +6,7 @@
 - **Используется в**: [UC-COUNTRY-003](#uc-country-003)
 - **Описание**: Пользователь добавляет в справочник новую страну.
 
-## Требования {#sf-country-create-requirements}
+## Требования для SF-COUNTRY-CREATE {#sf-country-create-requirements}
 
 === "FR"
 

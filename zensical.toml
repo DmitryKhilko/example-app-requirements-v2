@@ -40,8 +40,8 @@ nav = [
             "requirements/features/index.md",
             {"Справочник стран" = [
                 "requirements/features/country/index.md",
-                {"Общие" = "requirements/features/country/f/index.md"},
-                {"Создание" = "requirements/features/country/sf-create/index.md"},
+                {"F-COUNTRY" = "requirements/features/country/f/index.md"},
+                {"F-COUNTRY-CREATE" = "requirements/features/country/sf-create/index.md"},
             ]}, 
         ]},
     ]},
