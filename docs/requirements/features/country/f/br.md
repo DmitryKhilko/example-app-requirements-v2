@@ -1,5 +1,5 @@
 ## BG-COUNTRY-001 {#goal}
-- **Относится к**: [BG-001][1]
+- **Использует**: [BG-001][1]
 - **Используется в**: SF-COUNTRY-LIST, SF-COUNTRY-READ, [SF-COUNTRY-CREATE][2], SF-COUNTRY-UPDATE, 
 SF-COUNTRY-ACTIVATION, SF-COUNTRY-DELETE, SF-COUNTRY-IMPORT.  
 - **Описание**: Единый, достоверный и управляемый справочник стран, на который опираются адреса, контрагенты и документы 
