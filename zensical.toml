@@ -49,7 +49,7 @@ nav = [
     {"Методология" = [
         {"Глоссарий" = "methodology/glossary.md"},    
         {"Стандарт создания требований к ПО" = "methodology/standard-requirements.md"},    
-        {"Взаимосвязь требований к ПО" = "methodology/standard-requirements.md"},    
+        {"Взаимосвязь требований к ПО" = "methodology/relationships-requirements.md"},    
     ]},
 ]
 # END GENERATED NAV
