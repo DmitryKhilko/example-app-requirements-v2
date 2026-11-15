@@ -1,4 +1,4 @@
-# Создание страны {#country-create}
+# Создание страны {#sf-country-create}
 
 === "FR"
 
