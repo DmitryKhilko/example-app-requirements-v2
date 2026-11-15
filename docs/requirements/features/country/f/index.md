@@ -39,3 +39,7 @@
 === "UI"
 
     --8<-- "requirements/features/country/f/ui.md"
+
+
+[1]: <../../../business-context/business-requirements.md#bg-001>
+[2]: <../sf-create/index.md#sf-country-create>
