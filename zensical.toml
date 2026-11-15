@@ -171,4 +171,5 @@ emoji_generator = "zensical.extensions.emoji.to_svg"
 # где ссылки на спецификации задаются явно атрибутом data-preview, и releases.md (страница «Релизы», пока не подключена).
 [[project.markdown_extensions.zensical.extensions.preview.configurations]]
 targets.include = ["**/*.md"]
-sources.exclude = ["index.md", "**/index.md", "releases.md"]
+# sources.exclude = ["index.md", "**/index.md", "releases.md"]
+
