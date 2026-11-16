@@ -1,4 +1,5 @@
-# SF-COUNTRY-CREATE: Детальная функциональность "Создание страны" {#sf-country-create}
+# SF-COUNTRY-CREATE {#sf-country-create}
+- **Наименование**: Детальная функциональность "Создание страны"
 - **Приоритет**: must
 - **Роли**: ais
 - **Использует**: [SF-G-TOAST](../../global/sf-g-toast/index.md)
