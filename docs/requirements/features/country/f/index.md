@@ -8,9 +8,9 @@
 
 ## Требования общие {#f-country-requirements}
 
-=== "BR"
+=== "CONTEXT"
 
-    --8<-- "requirements/features/country/f/br.md"
+    --8<-- "requirements/features/country/f/context.md"
 
 === "UC"
 
