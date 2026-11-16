@@ -69,7 +69,7 @@ API и критерии приёмки описаны в соответству�
     - **Приоритет**: should
     - **Спецификация**: [sf-import/index.md](sf-import/index.md)
 
-## Матрица ролей и прав доступа {#rbac}
+## Матрица ролей {#rbac}
 
 | Роль (Код) | Просмотр активных (`SF-COUNTRY-LIST`, `SF-COUNTRY-READ`) | Просмотр неактивных (`SF-COUNTRY-LIST`, `SF-COUNTRY-READ`) | Создание (`SF-COUNTRY-CREATE`) | Редактирование (`SF-COUNTRY-UPDATE`) | Активация / Деактивация (`SF-COUNTRY-ACTIVATION`) | Удаление (`SF-COUNTRY-DELETE`) | Импорт НСИ АСФР (`SF-COUNTRY-IMPORT`) | Код отказа при попытке |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
