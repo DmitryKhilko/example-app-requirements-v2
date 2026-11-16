@@ -62,15 +62,15 @@ edit_uri = "edit/main/docs/"
 [[project.nav]]
 "Архив" = "requirements-archive/index.md"
 
-[[project.nav]]
-  [[project.nav."Методология"]]
-  "Глоссарий" = "methodology/glossary.md"
+#[[project.nav]]
+#  [[project.nav."Методология"]]
+#  "Глоссарий" = "methodology/glossary.md"
 
-  [[project.nav."Методология"]]
-  "Стандарт создания требований к ПО" = "methodology/standard-requirements.md"
+#  [[project.nav."Методология"]]
+#  "Стандарт создания требований к ПО" = "methodology/standard-requirements.md"
 
-  [[project.nav."Методология"]]
-  "Взаимосвязь требований к ПО" = "methodology/relationships-requirements.md"
+#  [[project.nav."Методология"]]
+#  "Взаимосвязь требований к ПО" = "methodology/relationships-requirements.md"
 
 # END GENERATED NAV
 
