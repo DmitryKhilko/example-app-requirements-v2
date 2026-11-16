@@ -18,10 +18,6 @@
 
     --8<-- "requirements/features/country/f/dr.md"
 
-=== "EI"
-
-    --8<-- "requirements/features/country/f/ei.md"
-
 === "FR"
 
     --8<-- "requirements/features/country/f/fr.md"
