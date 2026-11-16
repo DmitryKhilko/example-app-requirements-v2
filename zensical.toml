@@ -34,37 +34,37 @@ edit_uri = "edit/main/docs/"
 "Проект" = "project/index.md"
 
 [[nav]]
-"Требования" = [
-    {"Глоссарий" = "requirements/business-context/glossary.md"},
-    {"Бизнес-требования" = "requirements/business-context/business-requirements.md"},
-    {"Глобальные требования" = [
-        "requirements/global-features/index.md",
-        {"Дизайн-система" = [
-            "requirements/global/design-system/index.md",
-            {"Бренд-бук" = "requirements/global/design-system/brandbook.md"},
-            {"UI-kit" = "requirements/global/design-system/ui-kit.md"}
-        ]},
-        {"Всплывающие сообщения (toast)" = "requirements/global-features/sf-g-toast/index.md"}
-    ]},
-    {"Реестр требований" = [
-        "requirements/features/index.md",
-        {"Справочник стран" = [
-            "requirements/features/country/index.md",
-            {"Общие" = "requirements/features/country/f/index.md"},
-            {"Создание" = "requirements/features/country/sf-create/index.md"}
-        ]}
-    ]}
-]
+  [[nav."Требования"]]
+  "Глоссарий" = "requirements/business-context/glossary.md"
+
+  [[nav."Требования"]]
+  "Бизнес-требования" = "requirements/business-context/business-requirements.md"
+
+  [[nav."Требования"]]
+  "Глобальные требования" = [
+      "requirements/global-features/index.md",
+      {"Дизайн-система" = ["requirements/global/design-system/index.md", {"Бренд-бук" = "requirements/global/design-system/brandbook.md"}, {"UI-kit" = "requirements/global/design-system/ui-kit.md"}]},
+      {"Всплывающие сообщения (toast)" = "requirements/global-features/sf-g-toast/index.md"}
+  ]
+
+  [[nav."Требования"]]
+  "Реестр требований" = [
+      "requirements/features/index.md",
+      {"Справочник стран" = ["requirements/features/country/index.md", {"Общие" = "requirements/features/country/f/index.md"}, {"Создание" = "requirements/features/country/sf-create/index.md"}]}
+  ]
 
 [[nav]]
 "Архив" = "requirements-archive/index.md"
 
 [[nav]]
-"Методология" = [
-    {"Глоссарий" = "methodology/glossary.md"},
-    {"Стандарт создания требований к ПО" = "methodology/standard-requirements.md"},
-    {"Взаимосвязь требований к ПО" = "methodology/relationships-requirements.md"}
-]
+  [[nav."Методология"]]
+  "Глоссарий" = "methodology/glossary.md"
+
+  [[nav."Методология"]]
+  "Стандарт создания требований к ПО" = "methodology/standard-requirements.md"
+
+  [[nav."Методология"]]
+  "Взаимосвязь требований к ПО" = "methodology/relationships-requirements.md"
 
 # END GENERATED NAV
 
