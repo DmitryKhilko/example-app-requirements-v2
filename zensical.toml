@@ -44,7 +44,7 @@ edit_uri = "edit/main/docs/"
 
   [[project.nav."Требования"]]
   "Глобальные требования" = [
-      "requirements/global-features/index.md",
+      "requirements/global/index.md",
       {"Дизайн-система" = ["requirements/global/design-system/index.md", 
       {"Бренд-бук" = "requirements/global/design-system/brandbook.md"}, 
       {"UI-kit" = "requirements/global/design-system/ui-kit.md"}]},
