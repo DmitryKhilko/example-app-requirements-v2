@@ -25,48 +25,55 @@ edit_uri = "edit/main/docs/"
 
 # --- 2. МЕНЮ ---
 # Блок между маркерами формирует скрипт генерации при сборке (CI). Маркеры BEGIN/END не удалять и не переименовывать.
+# Меню лежит в [project]: заголовки таблиц пишутся как [[project.nav]] и [[project.nav."Раздел"]].
+# Запись [[nav]] без префикса project создаёт ключ вне [project], и тогда Zensical выводит все файлы подряд.
 # BEGIN GENERATED NAV — не редактируйте вручную
 
-[[nav]]
+[[project.nav]]
 "О продукте" = "index.md"
 
-[[nav]]
+[[project.nav]]
 "Проект" = "project/index.md"
 
-[[nav]]
-  [[nav."Требования"]]
+[[project.nav]]
+  [[project.nav."Требования"]]
   "Глоссарий" = "requirements/business-context/glossary.md"
 
-  [[nav."Требования"]]
+  [[project.nav."Требования"]]
   "Бизнес-требования" = "requirements/business-context/business-requirements.md"
 
-  [[nav."Требования"]]
+  [[project.nav."Требования"]]
   "Глобальные требования" = [
       "requirements/global-features/index.md",
-      {"Дизайн-система" = ["requirements/global/design-system/index.md", {"Бренд-бук" = "requirements/global/design-system/brandbook.md"}, {"UI-kit" = "requirements/global/design-system/ui-kit.md"}]},
+      {"Дизайн-система" = ["requirements/global/design-system/index.md", 
+      {"Бренд-бук" = "requirements/global/design-system/brandbook.md"}, 
+      {"UI-kit" = "requirements/global/design-system/ui-kit.md"}]},
       {"Всплывающие сообщения (toast)" = "requirements/global-features/sf-g-toast/index.md"}
   ]
 
-  [[nav."Требования"]]
+  [[project.nav."Требования"]]
   "Реестр требований" = [
       "requirements/features/index.md",
-      {"Справочник стран" = ["requirements/features/country/index.md", {"Общие" = "requirements/features/country/f/index.md"}, {"Создание" = "requirements/features/country/sf-create/index.md"}]}
+      {"Справочник стран" = ["requirements/features/country/index.md", 
+      {"Общие" = "requirements/features/country/f/index.md"}, 
+      {"Создание" = "requirements/features/country/sf-create/index.md"}]}
   ]
 
-[[nav]]
+[[project.nav]]
 "Архив" = "requirements-archive/index.md"
 
-[[nav]]
-  [[nav."Методология"]]
+[[project.nav]]
+  [[project.nav."Методология"]]
   "Глоссарий" = "methodology/glossary.md"
 
-  [[nav."Методология"]]
+  [[project.nav."Методология"]]
   "Стандарт создания требований к ПО" = "methodology/standard-requirements.md"
 
-  [[nav."Методология"]]
+  [[project.nav."Методология"]]
   "Взаимосвязь требований к ПО" = "methodology/relationships-requirements.md"
 
 # END GENERATED NAV
+
 
 # --- 3. ТЕМА ---
 [project.theme]
