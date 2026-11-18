@@ -29,18 +29,19 @@
     - [Версия 0.00.01 (24.10.2026 22:01)](https://github.com/DmitryKhilko/example-app-requirements/commit/8e7d7a96059eee2eb5f175a615118d6f9d813dce){target="_blank" rel="noopener"}. Ответственный: Dmitry Khilko
 
 
-# SF-DICT-PRODUCT-TYPE-CREATE. Создание изделия {#sf-dict-product-type-create}
+# SF-PRODUCT-TYPE-CREATE {#sf-product-type-create}
+- **Название**: Создание изделия
 - **Статус**: Анализ
 - **Приоритет**: must
 - **Доступ**: 
     - **Разрешён**: ais
     - **Запрещён**: ash, ap, pp, ako, pko
-- **Относится**: [F-DICT-PRODUCT-TYPE][]
-- **Использует**: [FR-DICT-PRODUCT-TYPE-CREATE-001][], [FR-DICT-PRODUCT-TYPE-CREATE-002][]
+- **Относится**: [F-PRODUCT-TYPE][]
+- **Использует**: [FR-PRODUCT-TYPE-CREATE-001][], [FR-PRODUCT-TYPE-CREATE-002][]
 - **Описание**: Пользователь добавляет в справочник новое драгоценное изделие, чтобы оно стало доступно для выбора в 
 других подсистемах.
 
-## Требования {#sf-dict-product-type-create}
+## Требования {#sf-product-type-create}
 
 === "FR"
 

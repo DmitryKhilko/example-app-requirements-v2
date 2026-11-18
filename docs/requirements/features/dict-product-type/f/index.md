@@ -36,12 +36,13 @@
     - [Версия 0.00.01 (24.10.2026 22:01)](https://github.com/DmitryKhilko/example-app-requirements/commit/8e7d7a96059eee2eb5f175a615118d6f9d813dce){target="_blank" rel="noopener"}. Ответственный: Dmitry Khilko
 
 
-# F-DICT-PRODUCT-TYPE. Справочник изделий {#f-dict-product-type}
+# F-PRODUCT-TYPE {#f-product-type}
+- **Название**: Справочник изделий
 - **Статус**: Анализ
 - **Приоритет**: must
 - **Относится**: [BG-001][BG-001]
-- **Использует**: [SF-DICT-PRODUCT-TYPE-LIST][], [SF-DICT-PRODUCT-TYPE-READ][], [SF-DICT-PRODUCT-TYPE-CREATE][], 
-[SF-DICT-PRODUCT-TYPE-UPDATE][], [SF-DICT-PRODUCT-TYPE-ACTIVATION][], [SF-DICT-PRODUCT-TYPE-DELETE][]    
+- **Использует**: [SF-PRODUCT-TYPE-LIST][], [SF-PRODUCT-TYPE-READ][], [SF-PRODUCT-TYPE-CREATE][], 
+[SF-PRODUCT-TYPE-UPDATE][], [SF-PRODUCT-TYPE-ACTIVATION][], [SF-PRODUCT-TYPE-DELETE][]    
 - **Описание**: Справочник изделий является единым, достоверным и управляемым источником данных для документов всех 
 подсистем, что исключает расхождение и дублирование информации. Справочник обеспечивает единый перечень ювелирных 
 изделий для сквозного учёта на всех этапах жизненного цикла работ: от формирования заявления до оформления выдачи. Для 
@@ -49,12 +50,12 @@
 редактировать, изменять статус и удалять.
 
 
-## Границы {#f-dict-product-type}
+## Границы {#f-product-type}
 
 - **Входит**: Просмотр, поиск, создание, изменение, деактивация и удаление записей, права доступа и аудит изменений.
 - **Не входит**: Загрузка из файла, загрузка из внешних классификаторов, импорт из НСИ АСФР.
 
-## Требования {#f-dict-product-type}
+## Требования {#f-product-type}
 
 === "UC"
 
