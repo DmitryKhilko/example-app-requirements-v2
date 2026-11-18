@@ -64,18 +64,6 @@ release_date:
     - **Входит**: Просмотр, поиск, создание, изменение, деактивация и удаление записей, права доступа и аудит изменений.
     - **Не входит**: Загрузка из файла, загрузка из внешних классификаторов, импорт из НСИ АСФР.
 
-=== "UC"
-
-    --8<-- "requirements/features/dict-product-type/uc.md"
-
-=== "DR"
-
-    --8<-- "requirements/features/dict-product-type/dr.md"
-
-=== "FR"
-
-    --8<-- "requirements/features/dict-product-type/fr.md"
-
 
 [BG-001]: <../../../business-context/business-requirements.md#bg-001>
 [SF-PRODUCT-TYPE-LIST]: <../sf-list/index.md#sf-country-list>
