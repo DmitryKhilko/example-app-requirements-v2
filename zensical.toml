@@ -61,7 +61,7 @@ edit_uri = "edit/main/docs/"
       ]},
       {"Справочник типов изделий" = [
           "requirements/features/dict-product-type/index.md",
-          {"Общие" = "requirements/features/dict-product-type/general/index.md"},
+          {"Общие" = "requirements/features/dict-product-type/f/index.md"},
           {"Создание" = "requirements/features/dict-product-type/sf-create/index.md"}
       ]}
   ]

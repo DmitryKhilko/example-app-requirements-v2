@@ -53,15 +53,15 @@
 
 === "UC"
 
-    --8<-- "requirements/features/dict-product-type/uc.md"
+    --8<-- "requirements/features/dict-product-type/f/uc.md"
 
 === "DR"
 
-    --8<-- "requirements/features/dict-product-type/dr.md"
+    --8<-- "requirements/features/dict-product-type/f/dr.md"
 
 === "FR"
 
-    --8<-- "requirements/features/dict-product-type/fr.md"
+    --8<-- "requirements/features/dict-product-type/f/fr.md"
 
 
 [BG-001]: <../../../business-context/business-requirements.md#bg-001>
