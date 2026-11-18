@@ -1,9 +1,9 @@
 ---
-ОТВЕТСТВЕННЫЙ: Khilko Dmitry
-ВЕРСИЯ ДОКУМЕНТА: 0.02.02 (09.11.2026 14:02)
-ЗАДАЧА: [123][]
-РЕЛИЗ:
-ДАТА РЕЛИЗА: 
+owner: "Khilko Dmitry"
+doc_version: "0.02.02 (09.11.2026 14:02)"
+task_id: "123"
+release_id:
+release_date: 
 ---
 
 # F-DICT-PRODUCT-TYPE. Справочник изделий {#f-dict-product-type}

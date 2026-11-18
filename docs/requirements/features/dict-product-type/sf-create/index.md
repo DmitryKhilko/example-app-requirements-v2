@@ -1,9 +1,9 @@
 ---
-ОТВЕТСТВЕННЫЙ: Khilko Dmitry
-ВЕРСИЯ ДОКУМЕНТА: 0.01.00 (04.11.2026 07:44)
-ЗАДАЧА: [123][]
-РЕЛИЗ:
-ДАТА РЕЛИЗА: 
+owner: "Khilko Dmitry"
+doc_version: "0.01.00 (04.11.2026 07:44)"
+task_id: "123"
+release_id:
+release_date: 
 ---
 
 # SF-COUNTRY-CREATE. Создание страны {#sf-country-create}
