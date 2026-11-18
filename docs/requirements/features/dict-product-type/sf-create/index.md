@@ -1,3 +1,17 @@
+---
+id: "SF-PRODUCT-TYPE-CREATE"
+feature: "F-PRODUCT-TYPE"
+status: "analysis"
+icon: lucide/file-text
+order: 10
+doc_version: "0.01.00"
+datetime_version: "04.11.2026 07:44"
+owner: "Khilko Dmitry"
+task_id: "1"
+release_id: 
+release_date: 
+---
+
 > Ответственный: Khilko Dmitry    
 > Версия: 0.01.00 (04.11.2026 07:44)    
 > Задача: [123][]    
