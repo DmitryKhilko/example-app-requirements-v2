@@ -46,7 +46,7 @@ release_date:
     - [Версия 0.00.01 (24.10.2026 22:01)](https://github.com/DmitryKhilko/example-app-requirements/commit/8e7d7a96059eee2eb5f175a615118d6f9d813dce){target="_blank" rel="noopener"}. Ответственный: Dmitry Khilko
 
 # SF-PRODUCT-TYPE-CREATE {#sf-product-type-create}
-- **Название**: Создание вида изделия
+- **Название**: Создание вида изделий
 - **Статус**: анализ
 - **Приоритет**: must
 - **Права доступа**: 
