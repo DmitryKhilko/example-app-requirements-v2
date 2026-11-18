@@ -64,10 +64,31 @@ edit_uri = "edit/main/docs/"
             {"Общие UC" = "requirements/features/dict-product-type/uc.md"},
             {"Общие DR" = "requirements/features/dict-product-type/dr.md"},
             {"Общие FR" = "requirements/features/dict-product-type/fr.md"},
+
+            {"Список" = [
+                "requirements/features/dict-product-type/sf-list/index.md",
+                {"FR" = "requirements/features/dict-product-type/sf-list/fr.md"}
+            ]},
+            {"Карточка" = [
+                "requirements/features/dict-product-type/sf-read/index.md",
+                {"FR" = "requirements/features/dict-product-type/sf-read/fr.md"}
+            ]},
             {"Создание" = [
                 "requirements/features/dict-product-type/sf-create/index.md",
                 {"FR" = "requirements/features/dict-product-type/sf-create/fr.md"}
-            ]}
+            ]},
+            {"Изменение" = [
+                "requirements/features/dict-product-type/sf-update/index.md",
+                {"FR" = "requirements/features/dict-product-type/sf-update/fr.md"}
+            ]},
+            {"Активация" = [
+                "requirements/features/dict-product-type/sf-activation/index.md",
+                {"FR" = "requirements/features/dict-product-type/sf-activation/fr.md"}
+            ]},
+            {"Удаление" = [
+                "requirements/features/dict-product-type/sf-delete/index.md",
+                {"FR" = "requirements/features/dict-product-type/sf-delete/fr.md"}
+            ]},
         ]}
     ]
   
