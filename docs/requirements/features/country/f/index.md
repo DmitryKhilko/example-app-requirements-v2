@@ -39,33 +39,6 @@
     - **Подтверждает**: служба безопасности
     - **Допущение**: Срок хранения заданий импорта 12 месяцев (принят аналитиком).
 
-## Требования {#f-country-requirements}
-
-=== "UC"
-
-    --8<-- "requirements/features/country/f/uc.md"
-
-=== "DR"
-
-    --8<-- "requirements/features/country/f/dr.md"
-
-=== "FR"
-
-    --8<-- "requirements/features/country/f/fr.md"
-
-=== "AR"
-
-    --8<-- "requirements/features/country/f/ar.md"
-
-=== "NFR"
-
-    --8<-- "requirements/features/country/f/nfr.md"
-
-=== "UI"
-
-    --8<-- "requirements/features/country/f/ui.md"
-
-
 [BG-001]: <../../../business-context/business-requirements.md#bg-001>
 [SF-COUNTRY-LIST]: <../sf-list/index.md#sf-country-list>
 [SF-COUNTRY-CREATE]: <../sf-create/index.md#sf-country-create>

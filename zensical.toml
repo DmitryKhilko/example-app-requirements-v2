@@ -63,7 +63,7 @@ edit_uri = "edit/main/docs/"
           "requirements/features/dict-product-type/index.md",
           {"Общие" = [
               "requirements/features/dict-product-type/f/index.md",
-              {"UI" = "requirements/features/dict-product-type/f/uc.md"}
+              {"UC" = "requirements/features/dict-product-type/f/uc.md"}
           ]},
           {"Создание" = "requirements/features/dict-product-type/sf-create/index.md"}
       ]}

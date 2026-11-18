@@ -54,16 +54,6 @@ release_date:
 - **Описание**: Пользователь добавляет в справочник новый вид изделий из драгоценных металлов, чтобы оно стало доступно 
 для выбора в заявлениях на проведение пробирных работ и отображения в иных документах.
 
-## Требования {#sf-product-type-create}
-
-=== "FR"
-
-    --8<-- "requirements/features/country/sf-create/fr.md"
-
-=== "AR"
-
-    --8<-- "requirements/features/country/sf-create/ar.md"
-
 [F-PRODUCT-TYPE]: <../sf-list/index.md#sf-country-list>
 [FR-PRODUCT-TYPE-CREATE-001]: <../sf-list/index.md#sf-country-list>
 [FR-PRODUCT-TYPE-CREATE-002]: <../sf-list/index.md#sf-country-list>
