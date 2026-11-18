@@ -51,7 +51,7 @@
 
     --8<-- "requirements/features/country/sf-create/ar.md"
 
-[F-DICT-PRODUCT-TYPE]: <../sf-list/index.md#sf-country-list>
-[FR-DICT-PRODUCT-TYPE-CREATE-001]: <../sf-list/index.md#sf-country-list>
-[FR-DICT-PRODUCT-TYPE-CREATE-002]: <../sf-list/index.md#sf-country-list>
+[F-PRODUCT-TYPE]: <../sf-list/index.md#sf-country-list>
+[FR-PRODUCT-TYPE-CREATE-001]: <../sf-list/index.md#sf-country-list>
+[FR-PRODUCT-TYPE-CREATE-002]: <../sf-list/index.md#sf-country-list>
 [123]: <../sf-list/index.md#sf-country-list>

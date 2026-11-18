@@ -83,11 +83,11 @@
 
 
 [BG-001]: <../../../business-context/business-requirements.md#bg-001>
-[SF-DICT-PRODUCT-TYPE-LIST]: <../sf-list/index.md#sf-country-list>
-[SF-DICT-PRODUCT-TYPE-READ]: <../sf-list/index.md#sf-country-list>
-[SF-DICT-PRODUCT-TYPE-CREATE]: <../sf-create/index.md#sf-country-create>
-[SF-DICT-PRODUCT-TYPE-UPDATE]: <../sf-create/index.md#sf-country-create>
-[SF-DICT-PRODUCT-TYPE-ACTIVATION]: <../sf-create/index.md#sf-country-create>
-[SF-DICT-PRODUCT-TYPE-DELETE]: <../sf-create/index.md#sf-country-create>
+[SF-PRODUCT-TYPE-LIST]: <../sf-list/index.md#sf-country-list>
+[SF-PRODUCT-TYPE-READ]: <../sf-list/index.md#sf-country-list>
+[SF-PRODUCT-TYPE-CREATE]: <../sf-create/index.md#sf-country-create>
+[SF-PRODUCT-TYPE-UPDATE]: <../sf-create/index.md#sf-country-create>
+[SF-PRODUCT-TYPE-ACTIVATION]: <../sf-create/index.md#sf-country-create>
+[SF-PRODUCT-TYPE-DELETE]: <../sf-create/index.md#sf-country-create>
 [glossary]: <../../../business-context/glossary.md>
 [123]: <../../../business-context/glossary.md>
