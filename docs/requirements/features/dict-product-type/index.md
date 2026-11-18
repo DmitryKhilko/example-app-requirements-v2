@@ -4,13 +4,14 @@ status: "analysis"
 icon: lucide/file-pen-line
 order: 10
 doc_version: "0.02.02"
-datetime_version: "09.11.2026 14:02"
+datetime_doc_version: "09.11.2026 14:02"
 owner: "Khilko Dmitry"
 task_id: "123"
 release_id: 
 release_date: 
 ---
 
+> Статус: анализ
 > Ответственный: Khilko Dmitry  
 > Версия: 0.02.02 (09.11.2026 14:02)  
 > Задача: [123][]  
@@ -50,7 +51,6 @@ release_date:
 
 # F-PRODUCT-TYPE {#f-product-type}
 - **Название**: Справочник видов изделий
-- **Статус**: Анализ
 - **Приоритет**: must
 - **Использует**: [BG-001][]
 - **Используется в**: [SF-PRODUCT-TYPE-LIST][], [SF-PRODUCT-TYPE-READ][], [SF-PRODUCT-TYPE-CREATE][], 

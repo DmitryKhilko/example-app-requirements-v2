@@ -188,16 +188,9 @@ custom_fences = [
   { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
 ]
 
-# Вкладки (=== "Название") и чек-листы (- [ ] пункт)
-[project.markdown_extensions.pymdownx.tabbed]
-alternate_style = true
+# Чек-листы (- [ ] пункт)
 [project.markdown_extensions.pymdownx.tasklist]
 custom_checkbox = true
-
-# Вставка файлов в index.md: --8<-- "путь/от/docs/файл.md" (вкладки пакетов требований); пути считаются от docs/
-[project.markdown_extensions.pymdownx.snippets]
-base_path = ["docs"]
-check_paths = true
 
 # Иконки и эмодзи (:lucide-book-open:, :material-check:)
 [project.markdown_extensions.pymdownx.emoji]

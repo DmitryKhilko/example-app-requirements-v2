@@ -5,7 +5,9 @@ status: "analysis"
 icon: lucide/file-pen-line
 order: 10
 doc_version: "0.01.00"
-datetime_version: "04.11.2026 07:44"
+datetime_doc_version: "04.11.2026 07:44"
+f-doc_version: "0.02.02"
+f-datetime_doc_version: "09.11.2026 14:02"
 owner: "Khilko Dmitry"
 task_id: "1"
 release_id: 
@@ -14,6 +16,7 @@ release_date:
 
 > Ответственный: Khilko Dmitry    
 > Версия: 0.01.00 (04.11.2026 07:44)    
+> F-версия: 0.02.02 (09.11.2026 14:02) 
 > Задача: [123][]    
 > Релиз:  
 > Дата релиза:  
@@ -44,7 +47,7 @@ release_date:
 
 # SF-PRODUCT-TYPE-CREATE {#sf-product-type-create}
 - **Название**: Создание изделия
-- **Статус**: Анализ
+- **Статус**: анализ
 - **Приоритет**: must
 - **Права доступа**: 
     - **Разрешено**: ais

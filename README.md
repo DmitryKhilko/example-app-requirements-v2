@@ -8,7 +8,6 @@
 | `docs/` | Документы аналитиков (Markdown) и изображения; `docs/assets/logo.png` — логотип сайта и значок вкладки браузера |
 | `custom/main.html` | Шаблон: встраивает стили и скрипты в страницы сайта |
 | `custom/css/` | Стили сайта (`extra.css`: тёмно-синяя тёмная схема) |
-| `custom/js/` | Скрипты сайта (`tabbed-toc.js`: правое меню по вкладкам и подсветка раздела) |
 | `custom/py/` | Скрипты Python и `requirements.txt` для CI |
 | `.github/workflows/` | Сборка и публикация на GitHub Pages |
 
