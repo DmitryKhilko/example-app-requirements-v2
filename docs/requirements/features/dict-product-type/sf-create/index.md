@@ -28,7 +28,6 @@
     - [Версия 0.00.02 (24.10.2026 23:00)](https://github.com/DmitryKhilko/example-app-requirements/commit/13a86cc861427e7cfc81cdc1b3eeccd7ba62d2d2){target="_blank" rel="noopener"}. Ответственный: Dmitry Khilko
     - [Версия 0.00.01 (24.10.2026 22:01)](https://github.com/DmitryKhilko/example-app-requirements/commit/8e7d7a96059eee2eb5f175a615118d6f9d813dce){target="_blank" rel="noopener"}. Ответственный: Dmitry Khilko
 
-
 # SF-PRODUCT-TYPE-CREATE {#sf-product-type-create}
 - **Название**: Создание изделия
 - **Статус**: Анализ
@@ -38,8 +37,8 @@
     - **Запрещено**: pgipn, sgipn, igipn, pko, psh
 - **Относится**: [F-PRODUCT-TYPE][]
 - **Использует**: [FR-PRODUCT-TYPE-CREATE-001][], [FR-PRODUCT-TYPE-CREATE-002][]
-- **Описание**: Пользователь добавляет в справочник новое драгоценное изделие, чтобы оно стало доступно для выбора в 
-других подсистемах.
+- **Описание**: Пользователь добавляет в справочник новый вид изделий из драгоценных металлов, чтобы оно стало доступно 
+для выбора в заявлениях на проведение пробирных работ и отображения в иных документах.
 
 ## Требования {#sf-product-type-create}
 
