@@ -56,7 +56,10 @@ edit_uri = "edit/main/docs/"
       "requirements/features/index.md",
       {"Справочник стран" = ["requirements/features/country/index.md", 
       {"Общие" = "requirements/features/country/f/index.md"}, 
-      {"Создание" = "requirements/features/country/sf-create/index.md"}]}
+      {"Создание" = "requirements/features/country/sf-create/index.md"}]},
+      {"Справочник изделий" = ["requirements/features/dict-product-type/index.md", 
+      {"Общие" = "requirements/features/dict-product-type/f/index.md"}, 
+      {"Создание" = "requirements/features/dict-product-type/sf-create/index.md"}]}
   ]
 
 [[project.nav]]
