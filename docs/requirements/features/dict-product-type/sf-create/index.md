@@ -35,8 +35,8 @@
 - **Доступ**: 
     - **Разрешён**: ais
     - **Запрещён**: ash, ap, pp, ako, pko
-- **Относится**: [F-COUNTRY][]
-- **Использует**: [FR-COUNTRY-CREATE-001][], [FR-COUNTRY-CREATE-002][]
+- **Относится**: [F-DICT-PRODUCT-TYPE][]
+- **Использует**: [FR-DICT-PRODUCT-TYPE-CREATE-001][], [FR-DICT-PRODUCT-TYPE-CREATE-002][]
 - **Описание**: Пользователь добавляет в справочник новое драгоценное изделие, чтобы оно стало доступно для выбора в 
 других подсистемах.
 
@@ -50,7 +50,7 @@
 
     --8<-- "requirements/features/country/sf-create/ar.md"
 
-[F-COUNTRY]: <../sf-list/index.md#sf-country-list>
-[FR-COUNTRY-CREATE-001]: <../sf-list/index.md#sf-country-list>
-[FR-COUNTRY-CREATE-002]: <../sf-list/index.md#sf-country-list>
+[F-DICT-PRODUCT-TYPE]: <../sf-list/index.md#sf-country-list>
+[FR-DICT-PRODUCT-TYPE-CREATE-001]: <../sf-list/index.md#sf-country-list>
+[FR-DICT-PRODUCT-TYPE-CREATE-002]: <../sf-list/index.md#sf-country-list>
 [123]: <../sf-list/index.md#sf-country-list>
