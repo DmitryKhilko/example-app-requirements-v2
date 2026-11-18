@@ -1,11 +1,11 @@
 
-> owner: "Khilko Dmitry"
-> doc_version: "0.02.02 (09.11.2026 14:02)"
-> task_id: "123"
-> release_id:
-> release_date: 
+> ОТВЕТСТВЕННЫЙ: "Khilko Dmitry"  
+> ВЕРСИЯ ТРЕБОВАНИЙ: "0.02.02 (09.11.2026 14:02)"  
+> ЗАДАЧА: "123"  
+> РЕЛИЗ:  
+> ДАТА РЕЛИЗА:   
 
-??? note "Журнал изменений"
+??? note no-icon "<h2 id="change-history" style="display: inline;">Журнал изменений</h2>"
 
     - [Версия 0.02.02 (09.11.2026 14:02)](https://github.com/DmitryKhilko/example-app-requirements/commit/efaf30501ad53f16f8d4c3b36cabe0e942eb7fa3){target="_blank" rel="noopener"}. Ответственный: Khilko Dmitry
     - [Версия 0.02.01 (04.11.2026 15:11)](https://github.com/DmitryKhilko/example-app-requirements/commit/de78ace8327a08ada353c7f31e82a791c12be420){target="_blank" rel="noopener"}. Ответственный: Khilko Dmitry
