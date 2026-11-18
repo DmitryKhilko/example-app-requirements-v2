@@ -1,6 +1,6 @@
 # SF-COUNTRY-CREATE. Создание страны {#sf-country-create}
 - **Приоритет**: must
-- **Доступ**: `ais`
+- **Доступ**: ais (С)
 - **Относится**: [F-COUNTRY][]
 - **Использует**: [FR-COUNTRY-CREATE-001][], [FR-COUNTRY-CREATE-002][]
 - **Описание**: Пользователь добавляет в справочник новую страну, чтобы она стала доступна для выбора в других 
@@ -15,3 +15,7 @@
 === "AR"
 
     --8<-- "requirements/features/country/sf-create/ar.md"
+
+[F-COUNTRY]: <../sf-list/index.md#sf-country-list>
+[FR-COUNTRY-CREATE-001]: <../sf-list/index.md#sf-country-list>
+[FR-COUNTRY-CREATE-002]: <../sf-list/index.md#sf-country-list>
