@@ -14,7 +14,7 @@
 
 # --- 1. САЙТ И РЕПОЗИТОРИЙ ---
 [project]
-site_name = "EDI-Flow: автоматизированная информационная система EDI-провайдера"
+site_name = "Подсистема автоматизации деятельности ГИПН"
 site_description = "Пример организации требований с использованием подхода Documentation as Code"
 site_url = "https://dmitrykhilko.github.io/example-app-requirements-v2/"
 site_author = "Дмитрий Хилько"
