@@ -1,8 +1,8 @@
-> ОТВЕТСТВЕННЫЙ: "Khilko Dmitry"  
-> ВЕРСИЯ ТРЕБОВАНИЙ: "0.01.00 (04.11.2026 07:44)"  
-> ЗАДАЧА: "123"  
-> РЕЛИЗ:  
-> ДАТА РЕЛИЗА:  
+> Ответственный: Khilko Dmitry  
+> Версия: 0.01.00 (04.11.2026 07:44)  
+> Задача: [123][]  
+> Релиз:  
+> Дата релиза:  
 
 ??? note no-icon "<h2 id="change-history" style="display: inline;">Журнал изменений</h2>"
 
@@ -52,3 +52,4 @@
 [F-COUNTRY]: <../sf-list/index.md#sf-country-list>
 [FR-COUNTRY-CREATE-001]: <../sf-list/index.md#sf-country-list>
 [FR-COUNTRY-CREATE-002]: <../sf-list/index.md#sf-country-list>
+[123]: <../sf-list/index.md#sf-country-list>
