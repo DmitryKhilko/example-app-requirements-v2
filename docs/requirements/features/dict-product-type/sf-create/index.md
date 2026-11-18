@@ -2,7 +2,7 @@
 id: "SF-PRODUCT-TYPE-CREATE"
 feature: "F-PRODUCT-TYPE"
 status: "analysis"
-icon: lucide/file-text
+icon: lucide/file-pen-line
 order: 10
 doc_version: "0.01.00"
 datetime_version: "04.11.2026 07:44"

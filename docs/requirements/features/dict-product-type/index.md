@@ -1,3 +1,16 @@
+---
+id: "F-PRODUCT-TYPE"
+status: "analysis"
+icon: lucide/file-pen-line
+order: 10
+doc_version: "0.02.02"
+datetime_version: "09.11.2026 14:02"
+owner: "Khilko Dmitry"
+task_id: "123"
+release_id: 
+release_date: 
+---
+
 > Ответственный: Khilko Dmitry  
 > Версия: 0.02.02 (09.11.2026 14:02)  
 > Задача: [123][]  
