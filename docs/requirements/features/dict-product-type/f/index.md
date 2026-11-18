@@ -51,32 +51,6 @@
     - **Входит**: Просмотр, поиск, создание, изменение, деактивация и удаление записей, права доступа и аудит изменений.
     - **Не входит**: Загрузка из файла, загрузка из внешних классификаторов, импорт из НСИ АСФР.
 
-## Требования {#f-product-type}
-
-=== "UC"
-
-    --8<-- "requirements/features/country/f/uc.md"
-
-=== "DR"
-
-    --8<-- "requirements/features/country/f/dr.md"
-
-=== "FR"
-
-    --8<-- "requirements/features/country/f/fr.md"
-
-=== "AR"
-
-    --8<-- "requirements/features/country/f/ar.md"
-
-=== "NFR"
-
-    --8<-- "requirements/features/country/f/nfr.md"
-
-=== "UI"
-
-    --8<-- "requirements/features/country/f/ui.md"
-
 
 [BG-001]: <../../../business-context/business-requirements.md#bg-001>
 [SF-PRODUCT-TYPE-LIST]: <../sf-list/index.md#sf-country-list>
