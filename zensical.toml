@@ -60,9 +60,15 @@ edit_uri = "edit/main/docs/"
           {"Создание" = "requirements/features/country/sf-create/index.md"}
       ]},
       {"Справочник типов изделий" = [
-          "requirements/features/dict-product-type/index.md",
-          {"Создание" = "requirements/features/dict-product-type/sf-create/index.md"}
-      ]}
+            "requirements/features/dict-product-type/index.md",
+            {"Общие UC" = "requirements/features/dict-product-type/uc.md"},
+            {"Общие DR" = "requirements/features/dict-product-type/dr.md"},
+            {"Общие FR" = "requirements/features/dict-product-type/fr.md"}
+          ]},
+          {"Создание" = [
+              "requirements/features/dict-product-type/sf-create/index.md",
+              {"FR" = "requirements/features/dict-product-type/sf-create/fr.md"}
+          ]}
   ]
   
 [[project.nav]]
