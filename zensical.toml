@@ -209,6 +209,14 @@ custom_fences = [
   { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
 ]
 
+# Диаграммы PlantUML (блок ```plantuml ... ```). Рисуются при сборке сайта и вставляются в страницу как SVG.
+# Для работы на машине сборки (и локально, для zensical serve) должны быть установлены PlantUML (команда plantuml) и Graphviz.
+# Вместо локальной команды можно указать свой сервер PlantUML: server = "https://адрес-сервера"
+# (публичный сервер не используйте: исходники диаграмм передаются на него при каждой сборке).
+[project.markdown_extensions.plantuml_markdown]
+plantuml_cmd = "plantuml"
+format = "svg"
+
 # Чек-листы (- [ ] пункт)
 [project.markdown_extensions.pymdownx.tasklist]
 custom_checkbox = true

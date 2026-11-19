@@ -57,6 +57,9 @@ jobs:
 
       - run: uv pip install --system -r custom/py/requirements.txt zensical
 
+      # PlantUML и Graphviz для диаграмм ```plantuml (расширение plantuml_markdown вызывает команду plantuml при сборке)
+      - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends plantuml graphviz
+
       # Падает с ошибкой, если в метаданных спецификаций нет module или feature_name либо файл лежит вне docs/registry/
       # --versioning: пересчитывает doc_version, datetime_version, owner и «Журнал изменений» активных спецификаций по истории git
       # (ссылки на коммиты)
