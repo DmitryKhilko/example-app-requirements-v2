@@ -57,8 +57,24 @@ jobs:
 
       - run: uv pip install --system -r custom/py/requirements.txt zensical
 
-      # PlantUML и Graphviz для диаграмм ```plantuml (расширение plantuml_markdown вызывает команду plantuml при сборке)
-      - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends plantuml graphviz
+      # PlantUML и Graphviz для диаграмм ```plantuml (расширение plantuml_markdown вызывает команду plantuml при сборке).
+      # Java уже есть на раннере, поэтому пакет plantuml из apt (он тянет ещё и свой JRE, около 90 МБ) не используется:
+      # jar скачивается с GitHub, из apt ставится только небольшой Graphviz. Зеркала Ubuntu иногда недоступны, поэтому
+      # заданы повторы и короткие таймауты: при сбое шаг падает быстро, а не висит минуты.
+      - name: Install PlantUML and Graphviz
+        timeout-minutes: 5
+        run: |
+          set -e
+          java -version
+          APT_OPTS="-o Acquire::Retries=3 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20"
+          sudo apt-get $APT_OPTS update || true
+          sudo apt-get $APT_OPTS install -y --no-install-recommends graphviz
+          sudo curl -fsSL --retry 3 -o /opt/plantuml.jar \
+            https://github.com/plantuml/plantuml/releases/download/v1.2026.10/plantuml-1.2026.10.jar
+          printf '#!/bin/sh\nexec java -Djava.awt.headless=true -jar /opt/plantuml.jar "$@"\n' | sudo tee /usr/local/bin/plantuml > /dev/null
+          sudo chmod +x /usr/local/bin/plantuml
+          dot -V
+          plantuml -version | head -2
 
       # Падает с ошибкой, если в метаданных спецификаций нет module или feature_name либо файл лежит вне docs/registry/
       # --versioning: пересчитывает doc_version, datetime_version, owner и «Журнал изменений» активных спецификаций по истории git
