@@ -278,7 +278,7 @@
    -------------------------------------------------------------------------- */
 :root {
   --layout-top-gap: 0;        /* Зазор между вкладками и всей областью контента (тема: 1.5rem) */
-  --layout-sidebar-top: .5;         /* Верхний отступ левого и правого меню (тема: 1.2rem) */
+  --layout-sidebar-top: 1;         /* Верхний отступ левого и правого меню (тема: 1.2rem) */
   --layout-content-top: 0;         /* Верхний отступ статьи (тема: 0.6rem) */
   --layout-content-spacer: 0;      /* Высота пустой распорки перед статьёй (тема: 0.4rem) */
 }
@@ -330,9 +330,9 @@
      --content-gap-right  отступ между статьёй и правым меню (тема: около 0.8rem).
    -------------------------------------------------------------------------- */
 :root {
-  --page-max-width: 80rem;
-  --sidebar-left-width: 14rem;
-  --sidebar-right-width: 12.1rem;
+  --page-max-width: 70rem;
+  --sidebar-left-width: 20rem;
+  --sidebar-right-width: 20rem;
   --content-gap-left: 0.8rem;
   --content-gap-right: 0.8rem;
 }
