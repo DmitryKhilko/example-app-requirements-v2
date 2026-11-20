@@ -53,12 +53,15 @@ release_date:
     - **Разрешено**: ais
     - **Запрещено**: pgipn, sgipn, igipn, pko, psh
 - **Использует**: [F-PRODUCT-TYPE][]
-- **Используется в**: [FR-PRODUCT-TYPE-CREATE-001][], [FR-PRODUCT-TYPE-CREATE-002][]
+- **Используется в**: [DR-PRODUCT-TYPE-CREATE-001][], [FR-PRODUCT-TYPE-CREATE-001][], [FR-PRODUCT-TYPE-CREATE-002][],
+[AR-PRODUCT-TYPE-CREATE-001][]
 - **Описание**: Пользователь добавляет в справочник новый вид изделий из драгоценных металлов, чтобы оно стало доступно 
 для выбора в заявлениях на проведение пробирных работ и отображения в иных документах.
 
 
-[F-PRODUCT-TYPE]: <../sf-list/index.md#sf-country-list>
-[FR-PRODUCT-TYPE-CREATE-001]: <../sf-list/index.md#sf-country-list>
-[FR-PRODUCT-TYPE-CREATE-002]: <../sf-list/index.md#sf-country-list>
+[F-PRODUCT-TYPE]: <../index.md#f-product-type>
+[DR-PRODUCT-TYPE-CREATE-001]: <dr.md#dr-product-type-create-001>
+[FR-PRODUCT-TYPE-CREATE-001]: <fr.md#fr-product-type-create-001>
+[FR-PRODUCT-TYPE-CREATE-002]: <fr.md#fr-product-type-create-002>
+[AR-PRODUCT-TYPE-CREATE-001]: <fr.md#ar-product-type-create-001>
 [123]: <../sf-list/index.md#sf-country-list>

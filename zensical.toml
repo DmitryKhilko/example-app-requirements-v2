@@ -75,6 +75,7 @@ edit_uri = "edit/main/docs/"
             ]},
             {"Создание" = [
                 "requirements/features/dict-product-type/sf-create/index.md",
+                {"DR" = "requirements/features/dict-product-type/sf-create/dr.md"},
                 {"FR" = "requirements/features/dict-product-type/sf-create/fr.md"}
             ]},
             {"Изменение" = [
@@ -216,6 +217,12 @@ custom_fences = [
 [project.markdown_extensions.plantuml_markdown]
 plantuml_cmd = "plantuml"
 format = "svg"
+
+# Вставка файлов в страницу: --8<-- "путь/от/docs/файл" (пути считаются от docs/).
+# Нужна, чтобы показывать на страницах требований эталоны запросов, ответов и схем (JSON) прямо из файлов, которые читают автотесты.
+[project.markdown_extensions.pymdownx.snippets]
+base_path = ["docs"]
+check_paths = true
 
 # Чек-листы (- [ ] пункт)
 [project.markdown_extensions.pymdownx.tasklist]

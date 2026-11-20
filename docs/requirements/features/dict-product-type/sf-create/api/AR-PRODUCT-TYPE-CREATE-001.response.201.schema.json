@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ответ 201: созданный вид изделий",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pk",
+    "name_nominative",
+    "product_group",
+    "default_streak_count",
+    "wholesale_gold_streak_count",
+    "stamp_impressions_count",
+    "is_active",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "pk": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Уникальный идентификатор записи"
+    },
+    "name_nominative": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 150
+    },
+    "product_group": {
+      "enum": [
+        "JEWELRY",
+        "WEIGHT_PRODUCTS",
+        "WATCH_CASES"
+      ]
+    },
+    "default_streak_count": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 999.99
+    },
+    "wholesale_gold_streak_count": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 999.99
+    },
+    "stamp_impressions_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "is_active": {
+      "const": true,
+      "description": "Созданная запись всегда активна"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601, UTC"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601, UTC"
+    }
+  }
+}
