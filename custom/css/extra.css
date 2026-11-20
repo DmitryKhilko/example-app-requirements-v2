@@ -331,8 +331,8 @@
    -------------------------------------------------------------------------- */
 :root {
   --page-max-width: 70rem;
-  --sidebar-left-width: 20rem;
-  --sidebar-right-width: 20rem;
+  --sidebar-left-width: 12.1rem;
+  --sidebar-right-width: 12.1rem;
   --content-gap-left: 0.8rem;
   --content-gap-right: 0.8rem;
 }
