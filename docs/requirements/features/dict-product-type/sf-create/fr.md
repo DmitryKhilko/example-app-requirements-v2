@@ -1,5 +1,3 @@
-# Функциональные требования создания вида изделий {#fr-product-type-create}
-
 ## FR-PRODUCT-TYPE-CREATE-001 {#fr-product-type-create-001}
 - **Название**: Создание записи вида изделий
 - **Использует**: [SF-PRODUCT-TYPE-CREATE][], [DR-PRODUCT-TYPE-CREATE-001][]
