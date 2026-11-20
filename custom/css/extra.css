@@ -333,8 +333,8 @@
      --content-gap-right  отступ между статьёй и правым меню (тема: около 0.8rem).
    -------------------------------------------------------------------------- */
 :root {
-  --page-max-width: 68rem;
-  --sidebar-left-width: 14rem;
+  --page-max-width: 65rem;
+  --sidebar-left-width: 12.1rem;
   --sidebar-right-width: 12.1rem;
   --content-gap-left: 0.8rem;
   --content-gap-right: 0.8rem;
