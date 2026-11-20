@@ -1,5 +1,9 @@
 # ТРЕБОВАНИЯ К ДАННЫМ {#dr-product-type-create}
 
+??? note no-icon "<h2 id="change-history" style="display: inline;">Журнал изменений</h2>"
+
+    - Записей пока нет.
+
 ## DR-PRODUCT-TYPE-CREATE-001 {#dr-product-type-create-001}
 - **Название**: Данные для создания вида изделий
 - **Использует**: [F-PRODUCT-TYPE][]

@@ -1,5 +1,9 @@
 # ФУНКЦИОНАЛЬНЫЕ ТРЕБОВАНИЯ {#fr-product-type-create}
 
+??? note no-icon "<h2 id="change-history" style="display: inline;">Журнал изменений</h2>"
+
+    - Записей пока нет.
+
 ## FR-PRODUCT-TYPE-CREATE-001 {#fr-product-type-create-001}
 - **Название**: Создание записи вида изделий
 - **Использует**: [SF-PRODUCT-TYPE-CREATE][], [DR-PRODUCT-TYPE-CREATE-001][]
