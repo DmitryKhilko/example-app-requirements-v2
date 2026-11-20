@@ -222,3 +222,20 @@
 .md-tabs .md-status {
   display: none;
 }
+
+/* 7. Расстояние между горизонтальным меню и контентом */
+.md-main__inner {
+  margin-top: 0;              /* по умолчанию 1.5rem */
+}
+.md-content__inner {
+  padding-top: 0;             /* по умолчанию .6rem */
+}
+.md-content__inner::before {
+  height: 0;                  /* пустой блок-распорка, по умолчанию .4rem */
+}
+.md-sidebar {
+  padding-top: 0;             /* левое меню и оглавление, по умолчанию 1.2rem */
+}
+.md-path {
+  margin-top: 0;              /* хлебные крошки */
+}
