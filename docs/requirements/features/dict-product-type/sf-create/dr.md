@@ -1,4 +1,4 @@
-# Требования к данным {#dr-product-type-create}
+# ТРЕБОВАНИЯ К ДАННЫМ {#dr-product-type-create}
 
 ## DR-PRODUCT-TYPE-CREATE-001 {#dr-product-type-create-001}
 - **Название**: Данные для создания вида изделий
