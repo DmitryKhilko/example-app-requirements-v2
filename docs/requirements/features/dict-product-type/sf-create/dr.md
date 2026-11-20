@@ -62,7 +62,6 @@
     - **Допущение**: Наименование уникально в пределах типа изделия: например, «Кольцо» может быть в группе `JEWELRY` и
       в другой группе, но не дважды в одной.
 
-
 [F-PRODUCT-TYPE]: <../index.md#f-product-type>
 [SF-PRODUCT-TYPE-CREATE]: <index.md#sf-product-type-create>
 [FR-PRODUCT-TYPE-CREATE-001]: <fr.md#fr-product-type-create-001>
