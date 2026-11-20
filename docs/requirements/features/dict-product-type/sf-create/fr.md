@@ -81,17 +81,24 @@ DR-PRODUCT-TYPE-CREATE-001 (проверки описаны в FR-PRODUCT-TYPE-C
 
 | Поле | Проверка | Код ошибки в `details` |
 | :--- | :--- | :--- |
-| Любое из пяти полей запроса | Поле передано | `REQUIRED` |
+| `name_nominative` | Поле передано | `REQUIRED` |
 | `name_nominative` | Значение является строкой | `INVALID_TYPE` |
 | `name_nominative` | После обрезки пробелов по краям строка не пустая | `BLANK` |
 | `name_nominative` | После обрезки пробелов по краям длина не больше 150 символов | `TOO_LONG` |
+| `product_group` | Поле передано | `REQUIRED` |
 | `product_group` | Значение является одним из `JEWELRY`, `WEIGHT_PRODUCTS`, `WATCH_CASES` | `INVALID_VALUE` |
-| `default_streak_count`, `wholesale_gold_streak_count` | Значение является числом | `INVALID_TYPE` |
-| `default_streak_count`, `wholesale_gold_streak_count` | Значение больше 0 и не больше 999.99 | `OUT_OF_RANGE` |
-| `default_streak_count`, `wholesale_gold_streak_count` | Не более 2 знаков после запятой | `INVALID_SCALE` |
+| `default_streak_count` | Поле передано | `REQUIRED` |
+| `default_streak_count` | Значение является числом | `INVALID_TYPE` |
+| `default_streak_count` | Значение больше 0 и не больше 999.99 | `OUT_OF_RANGE` |
+| `default_streak_count` | Не более 2 знаков после запятой | `INVALID_SCALE` |
+| `wholesale_gold_streak_count` | Поле передано | `REQUIRED` |
+| `wholesale_gold_streak_count` | Значение является числом | `INVALID_TYPE` |
+| `wholesale_gold_streak_count` | Значение больше 0 и не больше 999.99 | `OUT_OF_RANGE` |
+| `wholesale_gold_streak_count` | Не более 2 знаков после запятой | `INVALID_SCALE` |
+| `stamp_impressions_count` | Поле передано | `REQUIRED` |
 | `stamp_impressions_count` | Значение является целым числом | `INVALID_TYPE` |
 | `stamp_impressions_count` | Значение больше 0 | `OUT_OF_RANGE` |
-| Любое другое поле (в том числе `pk`, `is_active`, `created_at`, `updated_at`) | Поле не передаётся | `UNKNOWN_FIELD` |
+| Поле вне состава запроса (например, `pk`, `is_active`, `created_at`, `updated_at`) | Поле не передаётся | `UNKNOWN_FIELD` |
 
 ### Коды ответов при отказе {#fr-product-type-create-002-responses}
 
@@ -240,12 +247,12 @@ UUID. Дата и время — ISO 8601 в UTC, например `2026-11-20T0
 
 | Код ответа | Когда | Тело | Эталон |
 | :--- | :--- | :--- | :--- |
-| `201` | Запись создана | Созданная запись | [AR-PRODUCT-TYPE-CREATE-001.response.201.json](api/AR-PRODUCT-TYPE-CREATE-001.response.201.json) |
-| `400` | Ошибки в данных запроса | Ошибка с перечнем по полям | [AR-PRODUCT-TYPE-CREATE-001.response.400.json](api/AR-PRODUCT-TYPE-CREATE-001.response.400.json) |
-| `401` | Пользователь не аутентифицирован | Ошибка | [AR-PRODUCT-TYPE-CREATE-001.response.401.json](api/AR-PRODUCT-TYPE-CREATE-001.response.401.json) |
-| `403` | Нет права создания | Ошибка | [AR-PRODUCT-TYPE-CREATE-001.response.403.json](api/AR-PRODUCT-TYPE-CREATE-001.response.403.json) |
-| `409` | Запись уже существует | Ошибка с указанием поля | [AR-PRODUCT-TYPE-CREATE-001.response.409.json](api/AR-PRODUCT-TYPE-CREATE-001.response.409.json) |
-| `500` | Внутренняя ошибка | Ошибка | [AR-PRODUCT-TYPE-CREATE-001.response.500.json](api/AR-PRODUCT-TYPE-CREATE-001.response.500.json) |
+| `201` | Запись создана | Созданная запись | [response.201.json](api/AR-PRODUCT-TYPE-CREATE-001.response.201.json) |
+| `400` | Ошибки в данных запроса | Ошибка с перечнем по полям | [response.400.json](api/AR-PRODUCT-TYPE-CREATE-001.response.400.json) |
+| `401` | Пользователь не аутентифицирован | Ошибка | [response.401.json](api/AR-PRODUCT-TYPE-CREATE-001.response.401.json) |
+| `403` | Нет права создания | Ошибка | [response.403.json](api/AR-PRODUCT-TYPE-CREATE-001.response.403.json) |
+| `409` | Запись уже существует | Ошибка с указанием поля | [response.409.json](api/AR-PRODUCT-TYPE-CREATE-001.response.409.json) |
+| `500` | Внутренняя ошибка | Ошибка | [response.500.json](api/AR-PRODUCT-TYPE-CREATE-001.response.500.json) |
 
 Тела ответов с ошибками (`400`–`500`) соответствуют общей схеме
 [error.response.schema.json](../../../global/api/error.response.schema.json).
@@ -262,7 +269,11 @@ UUID. Дата и время — ISO 8601 в UTC, например `2026-11-20T0
 | `AR-PRODUCT-TYPE-CREATE-001.request.invalid.json` | Запрос с ошибками (ответ `400`) |
 | `AR-PRODUCT-TYPE-CREATE-001.response.201.schema.json` | Схема тела ответа `201` |
 | `AR-PRODUCT-TYPE-CREATE-001.response.201.json` | Эталон ответа `201` |
-| `AR-PRODUCT-TYPE-CREATE-001.response.400.json`, `.401.json`, `.403.json`, `.409.json`, `.500.json` | Эталоны ответов с ошибкой |
+| `AR-PRODUCT-TYPE-CREATE-001.response.400.json` | Эталон ответа `400` |
+| `AR-PRODUCT-TYPE-CREATE-001.response.401.json` | Эталон ответа `401` |
+| `AR-PRODUCT-TYPE-CREATE-001.response.403.json` | Эталон ответа `403` |
+| `AR-PRODUCT-TYPE-CREATE-001.response.409.json` | Эталон ответа `409` |
+| `AR-PRODUCT-TYPE-CREATE-001.response.500.json` | Эталон ответа `500` |
 
 ??? note "Схема запроса (JSON Schema)"
 
