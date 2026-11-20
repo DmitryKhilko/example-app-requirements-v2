@@ -105,7 +105,6 @@ end note
 Допущение, которое требует подтверждения: удаление доступно из обоих статусов, а условия удаления задаются в
 `SF-PRODUCT-TYPE-DELETE`.
 
-
 ```plantuml
 @startuml
 actor Пользователь as User
@@ -162,48 +161,6 @@ deactivate Sys
 
 @enduml
 ```
-
-```plantuml
-@startuml
-skinparam roundcorner 5
-hide circle
-
-' НАСТРОЙКА СТИЛЕЙ И МАКРОСОВ
-!define table(name, label) annotation "label" as name
-skinparam annotation {
- BackgroundColor #FFAAAA
- BorderColor Black
-}
-
-' Маркеры ключей (Цвет + Текстовый префикс)
-!define pk(x) <b><color:blue>[PK] x</color></b>
-!define fk(x) <b><color:green>[FK] x</color></b>
-
-' СУЩНОСТИ
-table(doc_client_card, "Карточка клиента") {
-    /' ТАБЛИЦА: Карточка клиента . '/
-    * pk(GUID) : UUID -- уникальный идентификатор записи
-    --
-    * is_active : BOOLEAN <<default: true>> -- Статус карточки (активна / в архиве)
-    * is_individual : BOOLEAN <<default: true>> -- Признак: Физлицо (true) или ЮЛ/ИП (false)
-    phone : VARCHAR(20) -- Телефон
-    email : TEXT -- Email для уведомлений
-    * rb_resident: BOOLEAN <<default: true>> -- Является ли резидентом РБ
-    == Реквизиты для Юридических лиц и ИП ==
-    fk(organization_id) : INT - ссылка на справочник организаций и ИП (нужно краткое наименование, полное и унп)
-    fk(address_id) : INT -- Ссылка на справочник дополнительных адресов (выгрузки)
-    == Реквизиты для Физических лиц ==
-    last_name : VARCHAR(50) -- Фамилия ФЛ
-    first_name : VARCHAR(50) -- Имя ФЛ
-    middle_name : VARCHAR(50) -- Отчество ФЛ    
-    passport_number : VARCHAR(20) -- Номер паспорта физлица (серия и номер)
-    passport_personal_number : VARCHAR(14) -- Идентификационный номер гражданина РБ (его может не быть вроде)
-    * created_at : TIMESTAMP -- Дата и время создания записи
-    * updated_at : TIMESTAMP -- Дата и время обновления записи
-}
-@enduml
-```
-
 
 [BG-001]: <../../../business-context/business-requirements.md#bg-001>
 [SF-PRODUCT-TYPE-LIST]: <../sf-list/index.md#sf-country-list>
