@@ -21,7 +21,7 @@ release_date:
 > Релиз:  
 > Дата релиза:  
 
-??? note no-icon "<h2 id="change-history" style="display: inline;">Журнал изменений</h2>"
+??? note "<h2 id="change-history" style="display: inline;">Журнал изменений</h2>"
 
     - [Версия 0.01.00 (04.11.2026 07:44)](https://github.com/DmitryKhilko/example-app-requirements/commit/c1507d6b031254b0390488a0796291826d34ec08){target="_blank" rel="noopener"}. Ответственный: Dmitry Khilko
     - [Версия 0.00.20 (03.11.2026 22:42)](https://github.com/DmitryKhilko/example-app-requirements/commit/3279bf046d2530e6eed5dde47cf2004f607026b8){target="_blank" rel="noopener"}. Ответственный: Dmitry Khilko
