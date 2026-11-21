@@ -38,48 +38,7 @@ release_date:
     - **Входит**: Просмотр, поиск, создание, изменение, деактивация и удаление записей, права доступа и аудит изменений.
     - **Не входит**: Загрузка из файла, загрузка из внешних классификаторов, импорт из НСИ АСФР.
 
-??? note "<h2 id="f-product-type-lifecycle" style="display: inline;">Жизненный цикл записи</h2>"
-
-    Схема показывает, в каком статусе находится запись справочника и какая детальная функциональность переводит её из 
-    статуса в статус. Просмотр и поиск (`SF-PRODUCT-TYPE-LIST`, `SF-PRODUCT-TYPE-READ`) и редактирование 
-    (`SF-PRODUCT-TYPE-UPDATE`) статус записи не меняют.
-
-    ```plantuml
-    @startuml
-    skinparam backgroundColor #FFFFFF
-    skinparam shadowing false
-    skinparam roundCorner 12
-    skinparam ArrowColor #14233f
-    skinparam StateBorderColor #14233f
-    skinparam StateBackgroundColor #eaf2ff
-    hide empty description
-
-    state "Активна" as Active
-    state "Неактивна" as Inactive
-    state "Удалена" as Deleted
-
-    [*] --> Active : SF-PRODUCT-TYPE-CREATE\nсоздание записи
-    Active --> Inactive : SF-PRODUCT-TYPE-ACTIVATION\nдеактивация
-    Inactive --> Active : SF-PRODUCT-TYPE-ACTIVATION\nактивация
-    Active --> Deleted : SF-PRODUCT-TYPE-DELETE
-    Inactive --> Deleted : SF-PRODUCT-TYPE-DELETE
-    Deleted --> [*]
-
-    note right of Active
-    Доступна для выбора в заявлениях
-    и других документах
-    end note
-
-    note right of Inactive
-    Скрыта от выбора
-    end note
-    @enduml
-    ```
-
-    Допущение, которое требует подтверждения: удаление доступно из обоих статусов, а условия удаления задаются в 
-    `SF-PRODUCT-TYPE-DELETE`.
-
-??? note "<h2 id="f-product-type-sequence-diagram" style="display: inline;">Диаграмма последовательности</h2>"
+??? note - **Диаграмма последовательности**</h2>"**
 
     Ниже представлена UML-диаграмма последовательности (Sequence Diagram), описывающая жизненный цикл сущности через 
     взаимодействие пользователя, системы и базы данных.
@@ -141,6 +100,12 @@ release_date:
     @enduml
     ```
 
+??? note - **Диаграмма состояний**
+
+    Схема показывает, в каком статусе находится запись справочника и какая детальная функциональность переводит её из 
+    статуса в статус. Просмотр и поиск (`SF-PRODUCT-TYPE-LIST`, `SF-PRODUCT-TYPE-READ`) и редактирование 
+    (`SF-PRODUCT-TYPE-UPDATE`) статус записи не меняют.
+
     ```plantuml
     @startuml
     skinparam backgroundColor #FFFFFF
@@ -183,6 +148,9 @@ release_date:
     end note
     @enduml
     ```
+
+    Допущение, которое требует подтверждения: удаление доступно из обоих статусов, а условия удаления задаются в 
+    `SF-PRODUCT-TYPE-DELETE`.
 
 
 [BG-001]: <../../../business-context/business-requirements.md#bg-001>
