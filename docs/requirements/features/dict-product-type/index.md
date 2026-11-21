@@ -38,103 +38,152 @@ release_date:
     - **Входит**: Просмотр, поиск, создание, изменение, деактивация и удаление записей, права доступа и аудит изменений.
     - **Не входит**: Загрузка из файла, загрузка из внешних классификаторов, импорт из НСИ АСФР.
 
-## Жизненный цикл записи {#f-product-type-lifecycle}
+??? note "<h2 id="f-product-type-lifecycle" style="display: inline;">Жизненный цикл записи</h2>"
 
-Схема показывает, в каком статусе находится запись справочника и какая детальная функциональность переводит её из
-статуса в статус. Просмотр и поиск (`SF-PRODUCT-TYPE-LIST`, `SF-PRODUCT-TYPE-READ`) и редактирование
-(`SF-PRODUCT-TYPE-UPDATE`) статус записи не меняют.
+    Схема показывает, в каком статусе находится запись справочника и какая детальная функциональность переводит её из 
+    статуса в статус. Просмотр и поиск (`SF-PRODUCT-TYPE-LIST`, `SF-PRODUCT-TYPE-READ`) и редактирование 
+    (`SF-PRODUCT-TYPE-UPDATE`) статус записи не меняют.
 
-```plantuml
-@startuml
-skinparam backgroundColor #FFFFFF
-skinparam shadowing false
-skinparam roundCorner 12
-skinparam ArrowColor #14233f
-skinparam StateBorderColor #14233f
-skinparam StateBackgroundColor #eaf2ff
-hide empty description
+    ```plantuml
+    @startuml
+    skinparam backgroundColor #FFFFFF
+    skinparam shadowing false
+    skinparam roundCorner 12
+    skinparam ArrowColor #14233f
+    skinparam StateBorderColor #14233f
+    skinparam StateBackgroundColor #eaf2ff
+    hide empty description
 
-state "Активна" as Active
-state "Неактивна" as Inactive
-state "Удалена" as Deleted
+    state "Активна" as Active
+    state "Неактивна" as Inactive
+    state "Удалена" as Deleted
 
-[*] --> Active : SF-PRODUCT-TYPE-CREATE\nсоздание записи
-Active --> Inactive : SF-PRODUCT-TYPE-ACTIVATION\nдеактивация
-Inactive --> Active : SF-PRODUCT-TYPE-ACTIVATION\nактивация
-Active --> Deleted : SF-PRODUCT-TYPE-DELETE
-Inactive --> Deleted : SF-PRODUCT-TYPE-DELETE
-Deleted --> [*]
+    [*] --> Active : SF-PRODUCT-TYPE-CREATE\nсоздание записи
+    Active --> Inactive : SF-PRODUCT-TYPE-ACTIVATION\nдеактивация
+    Inactive --> Active : SF-PRODUCT-TYPE-ACTIVATION\nактивация
+    Active --> Deleted : SF-PRODUCT-TYPE-DELETE
+    Inactive --> Deleted : SF-PRODUCT-TYPE-DELETE
+    Deleted --> [*]
 
-note right of Active
-  Доступна для выбора в заявлениях
-  и других документах
-end note
+    note right of Active
+    Доступна для выбора в заявлениях
+    и других документах
+    end note
 
-note right of Inactive
-  Скрыта от выбора
-end note
-@enduml
-```
+    note right of Inactive
+    Скрыта от выбора
+    end note
+    @enduml
+    ```
 
-Допущение, которое требует подтверждения: удаление доступно из обоих статусов, а условия удаления задаются в
-`SF-PRODUCT-TYPE-DELETE`.
+    Допущение, которое требует подтверждения: удаление доступно из обоих статусов, а условия удаления задаются в 
+    `SF-PRODUCT-TYPE-DELETE`.
 
-```plantuml
-@startuml
-actor Пользователь as User
-participant "Система" as Sys
-database "База данных" as DB
+??? note "<h2 id="f-product-type-sequence-diagram" style="display: inline;">Диаграмма последовательности</h2>"
 
-== Создание ==
-User -> Sys : Запрос на создание
-activate Sys
-Sys -> DB : Сохранить (статус: Активна)
-activate DB
-DB --> Sys : Успешно
-deactivate DB
-Sys --> User : Сущность создана (Активна)
-deactivate Sys
+    Ниже представлена UML-диаграмма последовательности (Sequence Diagram), описывающая жизненный цикл сущности через 
+    взаимодействие пользователя, системы и базы данных.
 
-== Деактивация и активация ==
-User -> Sys : Запрос на деактивацию
-activate Sys
-Sys -> DB : Обновить статус на "Неактивна"
-activate DB
-DB --> Sys : Успешно
-deactivate DB
-Sys --> User : Статус изменен (Неактивна)
-deactivate Sys
+    ```plantuml
+    @startuml
+    actor Пользователь as User
+    participant "Система" as Sys
+    database "База данных" as DB
 
-User -> Sys : Запрос на активацию
-activate Sys
-Sys -> DB : Обновить статус на "Активна"
-activate DB
-DB --> Sys : Успешно
-deactivate DB
-Sys --> User : Статус изменен (Активна)
-deactivate Sys
-
-== Удаление ==
-User -> Sys : Запрос на удаление
-activate Sys
-Sys -> DB : Проверить наличие ссылок
-activate DB
-DB --> Sys : Результат проверки
-deactivate DB
-
-alt Ссылок нет (из состояния Активна или Неактивна)
-    Sys -> DB : Обновить статус на "Удалена"
+    == Создание ==
+    User -> Sys : Запрос на создание
+    activate Sys
+    Sys -> DB : Сохранить (статус: Активна)
     activate DB
     DB --> Sys : Успешно
     deactivate DB
-    Sys --> User : Сущность удалена (Удалена)
-else Есть активные ссылки
-    Sys --> User : Ошибка: удаление невозможно
-end
-deactivate Sys
+    Sys --> User : Сущность создана (Активна)
+    deactivate Sys
 
-@enduml
-```
+    == Деактивация и активация ==
+    User -> Sys : Запрос на деактивацию
+    activate Sys
+    Sys -> DB : Обновить статус на "Неактивна"
+    activate DB
+    DB --> Sys : Успешно
+    deactivate DB
+    Sys --> User : Статус изменен (Неактивна)
+    deactivate Sys
+
+    User -> Sys : Запрос на активацию
+    activate Sys
+    Sys -> DB : Обновить статус на "Активна"
+    activate DB
+    DB --> Sys : Успешно
+    deactivate DB
+    Sys --> User : Статус изменен (Активна)
+    deactivate Sys
+
+    == Удаление ==
+    User -> Sys : Запрос на удаление
+    activate Sys
+    Sys -> DB : Проверить наличие ссылок
+    activate DB
+    DB --> Sys : Результат проверки
+    deactivate DB
+
+    alt Ссылок нет (из состояния Активна или Неактивна)
+        Sys -> DB : Обновить статус на "Удалена"
+        activate DB
+        DB --> Sys : Успешно
+        deactivate DB
+        Sys --> User : Сущность удалена (Удалена)
+    else Есть активные ссылки
+        Sys --> User : Ошибка: удаление невозможно
+    end
+    deactivate Sys
+
+    @enduml
+    ```
+
+    ```plantuml
+    @startuml
+    skinparam backgroundColor #FFFFFF
+    skinparam shadowing false
+    skinparam roundCorner 12
+    skinparam ArrowColor #14233f
+    skinparam StateBorderColor #14233f
+    skinparam StateBackgroundColor #eaf2ff
+    hide empty description
+
+    state "Активна" as Active
+    state "Неактивна" as Inactive
+    state "Удалена" as Deleted
+
+    [*] --> Active : SF-PRODUCT-TYPE-CREATE\nсоздание записи
+
+    Active --> Inactive : SF-PRODUCT-TYPE-ACTIVATION\nдеактивация
+    Inactive --> Active : SF-PRODUCT-TYPE-ACTIVATION\nактивация
+
+    Active --> Deleted : SF-PRODUCT-TYPE-DELETE\n[активных ссылок нет]
+    Inactive --> Deleted : SF-PRODUCT-TYPE-DELETE\n[активных ссылок нет]
+
+    Active --> Active : SF-PRODUCT-TYPE-DELETE\n[есть активные ссылки] / Ошибка
+    Inactive --> Inactive : SF-PRODUCT-TYPE-DELETE\n[есть активные ссылки] / Ошибка
+
+    Deleted --> [*]
+
+    note right of Active
+    Доступна для выбора в заявлениях
+    и других документах
+    end note
+
+    note right of Inactive
+    Скрыта от выбора
+    end note
+
+    note right of Deleted
+    Мягкое удаление: запись сохранена в БД,
+    операции над типом продукта недоступны
+    end note
+    @enduml
+    ```
+
 
 [BG-001]: <../../../business-context/business-requirements.md#bg-001>
 [SF-PRODUCT-TYPE-LIST]: <../sf-list/index.md#sf-country-list>
