@@ -449,3 +449,148 @@
 .md-typeset .mermaid {
   text-align: center;
 }
+
+
+/* --------------------------------------------------------------------------
+   11. СВОРАЧИВАНИЕ РАЗДЕЛОВ: КНОПКИ И ПОЛОСА «СВЕРНУТЬ ВСЁ / РАЗВЕРНУТЬ ВСЁ»
+
+   Элементы создаёт скрипт custom/js/sections.js (его подробное описание — в начале
+   файла скрипта). Здесь только внешний вид. Названия классов должны совпадать
+   с названиями в объекте CLS скрипта.
+
+   ЧТО СТИЛИЗУЕТСЯ
+     • .section-toolbar  — полоса с двумя кнопками над заголовком первого уровня;
+                           «прилипает» под шапкой сайта и видна при любой прокрутке;
+     • .section-heading  — заголовок, у которого есть кнопка сворачивания;
+     • .section-toggle   — кнопка со стрелкой внутри заголовка (стрелка вниз —
+                           раздел развёрнут, вправо — свёрнут);
+     • .is-collapsed     — класс заголовка свёрнутого раздела (меняет направление стрелки).
+
+   ПЕРЕМЕННЫЕ
+     --section-toolbar-top и --section-scroll-offset выставляет скрипт: он измеряет
+     высоту шапки и вкладок. Значения в var(..., запасное) используются, пока скрипт
+     не отработал. Остальные переменные ниже можно менять вручную.
+   -------------------------------------------------------------------------- */
+:root {
+  --section-toggle-size: 1.1em;        /* Размер кнопки-стрелки в заголовке (от размера шрифта заголовка) */
+  --section-toggle-opacity: 0.45;      /* Прозрачность стрелки в покое (1 — полностью яркая) */
+  --section-toolbar-gap: 0.4rem;       /* Расстояние между кнопками полосы */
+}
+
+/* Полоса с кнопками «Свернуть всё» и «Развернуть всё».
+   position: sticky держит её под шапкой при прокрутке: top задаётся скриптом по
+   фактической высоте шапки и вкладок. Фон такой же, как у страницы, чтобы текст,
+   прокручиваемый под полосой, не просвечивал. Полоса остаётся на экране, пока
+   на экране статья. */
+.md-typeset .section-toolbar {
+  position: sticky;
+  top: var(--section-toolbar-top, 5rem);
+  z-index: 2;                          /* выше текста, но ниже шапки (у неё z-index 4) */
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--section-toolbar-gap);
+  margin: 0 0 0.6rem;
+  padding: 0.35rem 0;
+  background-color: var(--md-default-bg-color);
+  border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+}
+
+/* Кнопки полосы */
+.md-typeset .section-toolbar button {
+  padding: 0.2rem 0.7rem;
+  font: inherit;
+  font-size: 0.7rem;                   /* мелкая подпись, чтобы полоса не отвлекала */
+  line-height: 1.4;
+  color: var(--md-default-fg-color--light);
+  background: none;
+  border: 0.05rem solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+}
+
+.md-typeset .section-toolbar button:hover,
+.md-typeset .section-toolbar button:focus-visible {
+  color: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+  background-color: var(--md-accent-fg-color--transparent);
+}
+
+/* Кнопка-стрелка в заголовке: небольшой квадрат слева от текста заголовка */
+.md-typeset .section-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--section-toggle-size);
+  height: var(--section-toggle-size);
+  margin: 0 0.3em 0 0;
+  padding: 0;
+  vertical-align: middle;
+  color: inherit;                      /* цвет стрелки совпадает с цветом заголовка */
+  background: none;
+  border: 0;
+  border-radius: 0.15em;
+  opacity: var(--section-toggle-opacity);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+/* Стрелка рисуется границами квадрата: правая и нижняя границы, повёрнутые на 45 градусов,
+   дают галочку, направленную вниз (раздел развёрнут) */
+.md-typeset .section-toggle::before {
+  content: "";
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-top: -0.2em;                 /* оптическое выравнивание: галочка визуально ниже центра */
+  border-right: 0.14em solid currentColor;
+  border-bottom: 0.14em solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.15s;
+}
+
+/* Свёрнутый раздел: галочка смотрит вправо */
+.md-typeset .section-heading.is-collapsed .section-toggle::before {
+  margin-top: 0;
+  margin-left: -0.2em;
+  transform: rotate(-45deg);
+}
+
+/* Стрелка становится яркой при наведении на заголовок или на саму кнопку и при
+   выборе кнопки с клавиатуры */
+.md-typeset .section-heading:hover .section-toggle,
+.md-typeset .section-toggle:hover,
+.md-typeset .section-toggle:focus-visible {
+  opacity: 1;
+}
+
+.md-typeset .section-toggle:focus-visible {
+  outline: 0.1rem solid var(--md-accent-fg-color);
+  outline-offset: 0.1rem;
+}
+
+/* На сенсорных экранах наведения нет, поэтому стрелка всегда достаточно яркая */
+@media (hover: none) {
+  .md-typeset .section-toggle {
+    --section-toggle-opacity: 0.8;
+  }
+}
+
+/* Переход по ссылке на заголовок: оставляем место под шапкой сайта и полосой кнопок,
+   иначе заголовок окажется под ними. Значение выставляет скрипт. */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  scroll-margin-top: var(--section-scroll-offset, 6rem);
+}
+
+/* При печати кнопки не нужны */
+@media print {
+  .md-typeset .section-toolbar,
+  .md-typeset .section-toggle {
+    display: none;
+  }
+}
