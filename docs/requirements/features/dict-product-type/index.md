@@ -20,11 +20,11 @@ release_date:
 
 # Основная функциональность {#f}
 
-## F-PRODUCT-TYPE {#f-product-type}
-
-??? note "<h3 id="change-history" style="display: inline;">Журнал изменений</h3>"
+??? note "<h2 id="change-history" style="display: inline;">Журнал изменений</h2>"
 
     - Записей пока нет.
+
+## F-PRODUCT-TYPE {#f-product-type}
 
 ### Параметры требования {#f-product-type-requirement-parameters}
 
