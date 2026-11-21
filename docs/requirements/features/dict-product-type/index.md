@@ -18,13 +18,15 @@ release_date:
 > Релиз:  
 > Дата релиза:   
 
-# F-PRODUCT-TYPE {#f-product-type}
+# Основная функциональность {#f}
 
-??? note "<h2 id="change-history" style="display: inline;">Журнал изменений</h2>"
+## F-PRODUCT-TYPE {#f-product-type}
+
+??? note "<h3 id="change-history" style="display: inline;">Журнал изменений</h3>"
 
     - Записей пока нет.
 
-## Параметры требования {#f-product-type-requirement-parameters}
+### Параметры требования {#f-product-type-requirement-parameters}
 
 - **Название**: Справочник видов изделий
 - **Приоритет**: must
@@ -40,7 +42,7 @@ release_date:
     - **Входит**: Просмотр, поиск, создание, изменение, деактивация и удаление записей, права доступа и аудит изменений.
     - **Не входит**: Загрузка из файла, загрузка из внешних классификаторов, импорт из НСИ АСФР.
 
-??? note "<h2 id="f-product-type-sequence-diagram" style="display: inline;">Диаграмма последовательности</h2>"
+??? note "<h3 id="f-product-type-sequence-diagram" style="display: inline;">Диаграмма последовательности</h3>"
 
     Ниже представлена UML-диаграмма последовательности (Sequence Diagram), описывающая жизненный цикл сущности через 
     взаимодействие пользователя, системы и базы данных.
@@ -102,7 +104,7 @@ release_date:
     @enduml
     ```
 
-??? note "<h2 id="f-product-type-state-diagram" style="display: inline;">Диаграмма состояний</h2>"
+??? note "<h3 id="f-product-type-state-diagram" style="display: inline;">Диаграмма состояний</h3>"
 
     Схема показывает, в каком статусе находится запись справочника и какая детальная функциональность переводит её из 
     статуса в статус. Просмотр и поиск (`SF-PRODUCT-TYPE-LIST`, `SF-PRODUCT-TYPE-READ`) и редактирование 

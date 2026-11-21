@@ -1,4 +1,4 @@
-# F-COUNTRY. Справочник стран {#sf-country}
+# F-COUNTRY. Справочник стран {#f-country}
 - **Приоритет**: must
 - **Роли**: ais, ash, ap, pp, ako, pko
 - **Относится**: [BG-001][BG-001]
