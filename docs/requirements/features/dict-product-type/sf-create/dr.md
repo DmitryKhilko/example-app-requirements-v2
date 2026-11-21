@@ -1,8 +1,8 @@
 # ТРЕБОВАНИЯ К ДАННЫМ {#dr}
 
-??? note "<h2 id="change-history" style="display: inline;">Журнал изменений</h2>"
+## Журнал изменений {#change-history .collapsed}
 
-    - Записей пока нет.
+- Записей пока нет.
 
 ## DR-PRODUCT-TYPE-CREATE-001 {#dr-product-type-create-001}
 

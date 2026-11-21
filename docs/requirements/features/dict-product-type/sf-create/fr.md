@@ -1,8 +1,8 @@
 # ФУНКЦИОНАЛЬНЫЕ ТРЕБОВАНИЯ {#fr}
 
-??? note "<h2 id="change-history" style="display: inline;">Журнал изменений</h2>"
+## Журнал изменений {#change-history .collapsed}
 
-    - Записей пока нет.
+- Записей пока нет.
 
 ## FR-PRODUCT-TYPE-CREATE-001 {#fr-product-type-create-001}
 
@@ -280,17 +280,17 @@ UUID. Дата и время — ISO 8601 в UTC, например `2026-11-20T0
 | `AR-PRODUCT-TYPE-CREATE-001.response.409.json` | Эталон ответа `409` |
 | `AR-PRODUCT-TYPE-CREATE-001.response.500.json` | Эталон ответа `500` |
 
-??? note "Схема запроса (JSON Schema)"
+#### Схема запроса (JSON Schema) {#ar-product-type-create-001-request-schema .collapsed}
 
-    ```json
-    --8<-- "requirements/features/dict-product-type/sf-create/api/AR-PRODUCT-TYPE-CREATE-001.request.schema.json"
-    ```
+```json
+--8<-- "requirements/features/dict-product-type/sf-create/api/AR-PRODUCT-TYPE-CREATE-001.request.schema.json"
+```
 
-??? note "Схема ответа 201 (JSON Schema)"
+#### Схема ответа 201 (JSON Schema) {#ar-product-type-create-001-response-201-schema .collapsed}
 
-    ```json
-    --8<-- "requirements/features/dict-product-type/sf-create/api/AR-PRODUCT-TYPE-CREATE-001.response.201.schema.json"
-    ```
+```json
+--8<-- "requirements/features/dict-product-type/sf-create/api/AR-PRODUCT-TYPE-CREATE-001.response.201.schema.json"
+```
 
 
 [SF-PRODUCT-TYPE-CREATE]: <index.md#sf-product-type-create>

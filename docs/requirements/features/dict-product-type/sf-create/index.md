@@ -23,9 +23,9 @@ release_date:
 
 # ДЕТАЛЬНАЯ ФУНКЦИОНАЛЬНОСТЬ {#sf}
 
-??? note "<h2 id="change-history" style="display: inline;">Журнал изменений</h2>"
+## Журнал изменений {#change-history .collapsed}
 
-    - Записей пока нет.
+- Записей пока нет.
 
 ## SF-PRODUCT-TYPE-CREATE {#sf-product-type-create}
 
