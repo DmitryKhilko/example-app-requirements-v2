@@ -19,13 +19,16 @@ release_date:
 > F-версия: 0.02.02 (09.11.2026 14:02)  
 > Задача: [123][]    
 > Релиз:  
-> Дата релиза:  
+> Дата релиза: 
+
+# Детальная функциональность {#sf}
 
 ??? note "<h2 id="change-history" style="display: inline;">Журнал изменений</h2>"
 
     - Записей пока нет.
 
-# SF-PRODUCT-TYPE-CREATE {#sf-product-type-create}
+## SF-PRODUCT-TYPE-CREATE {#sf-product-type-create}
+
 - **Название**: Создание вида изделий
 - **Статус**: анализ
 - **Приоритет**: must

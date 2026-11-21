@@ -26,8 +26,6 @@ release_date:
 
 ## F-PRODUCT-TYPE {#f-product-type}
 
-### Параметры требования {#f-product-type-requirement-parameters}
-
 - **Название**: Справочник видов изделий
 - **Приоритет**: must
 - **Использует**: [BG-001][]

@@ -5,6 +5,7 @@
     - Записей пока нет.
 
 ## DR-PRODUCT-TYPE-CREATE-001 {#dr-product-type-create-001}
+
 - **Название**: Данные для создания вида изделий
 - **Использует**: [F-PRODUCT-TYPE][]
 - **Используется в**: [SF-PRODUCT-TYPE-CREATE][], [FR-PRODUCT-TYPE-CREATE-001][], [FR-PRODUCT-TYPE-CREATE-002][],
